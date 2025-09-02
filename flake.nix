@@ -18,7 +18,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, ... }: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations = {
 
 
@@ -33,6 +33,13 @@
           ./modules/programs/neovim.nix
 	  ./modules/programs/kitty.nix
 	  ./modules/programs/vscode.nix
+
+	  home-manager.nixosModules.home-manager
+	  {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.luis = import ./users/luis/home.nix;
+          }
 	];
       };
 

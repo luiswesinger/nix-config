@@ -1,12 +1,12 @@
 # modules/programs/neovim.nix
-{ pkgs, ... }:
+{ pkgs, lib, home, ... }:
 
 {
+  # Home-Manager Neovim aktivieren
   programs.neovim = {
     enable = true;
     package = pkgs.neovim;
     extraPackages = with pkgs; [
-      # You'll need to install the dependencies for NVChad here
       ripgrep
       fd
       gnumake
@@ -16,14 +16,15 @@
     ];
   };
 
-  # Clone NVChad into your home directory and manage it with a symlink.
+  # NVChad als Home-Manager "file" installieren
   home.file.".config/nvim" = {
-    source = "${pkgs.fetchFromGitHub {
+    source = pkgs.fetchFromGitHub {
       owner = "NvChad";
       repo = "NvChad";
-      rev = "v2.5"; # Use a specific commit or tag for stability
-      hash = "sha256-LOrOfPWpJU/ADWDyVwPv9XNuYPq5KJtmAmSzplpccmE%3D";
-      }}";
+      rev = "v2.5";  # Stabiler Tag oder Commit
+      hash = "sha256-3jK6jkafmfgtMCkQjzKh9Svy7mdWfER80HtHtThCbZQ=";
+    };
     recursive = true;
   };
 }
+
