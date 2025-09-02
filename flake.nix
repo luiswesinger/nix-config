@@ -15,9 +15,9 @@
         # so that we can use the `agenix` & `mysecrets` in sub-modules
         specialArgs = inputs;
         modules = [
-	 ./configuration.nix
+	 ./hosts/first-test/configuration.nix
           # import & decrypt secrets in `mysecrets` in this module
-          ./secrets/default.nix
+          ./hosts/first-test/secrets/default.nix
         ];
       };
     };

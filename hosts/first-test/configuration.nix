@@ -107,7 +107,9 @@
     git
     tree
     logseq
-#  wget
+    kdePackages.kaccounts-integration
+    python312
+    python312Packages.dbus-python
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes"];
