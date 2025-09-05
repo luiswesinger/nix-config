@@ -1,4 +1,4 @@
-# hosts/first-test/configuration.nix
+# hosts/second-test/configuration.nix
 { config, pkgs, lib, inputs, ...}:
 
 {
@@ -11,7 +11,7 @@
     # ./secrets.nix
   ];
 
-  networking.hostName = "first-test";
+  networking.hostName = "second-test";
 
   # Define the user luis and link his home-manager configuration
   users.users.luis = {
@@ -22,3 +22,4 @@
 
   # home-manager.users.luis = import ../../users/luis/home.nix;
 }
+

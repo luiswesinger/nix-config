@@ -30,9 +30,9 @@
         specialArgs = inputs;
         modules = [
 	  ./hosts/first-test/configuration.nix
-          ./modules/programs/neovim.nix
-	  ./modules/programs/kitty.nix
-	  ./modules/programs/vscode.nix
+          #./modules/programs/neovim.nix
+	  #./modules/programs/kitty.nix
+	  #./modules/programs/vscode.nix
 
 	  home-manager.nixosModules.home-manager
 	  {
@@ -51,6 +51,7 @@
         system = "x86_64-linux";
 	specialArgs = inputs;
 	modules = [
+	  ./hosts/second-test/configuration.nix
 	];
       };
 

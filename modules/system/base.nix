@@ -53,7 +53,11 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
+    neovim
+    kitty
+    firefox
     git
+    ping
     tree
     logseq
   ];
