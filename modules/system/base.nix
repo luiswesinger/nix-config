@@ -57,7 +57,6 @@
     kitty
     firefox
     git
-    ping
     tree
     logseq
   ];
