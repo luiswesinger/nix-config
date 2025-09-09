@@ -1,4 +1,4 @@
-# hosts/minimal-setup/configuration.nix
+# hosts/work-setup/configuration.nix
 { config, pkgs, lib, inputs, ...}:
 
 {
@@ -7,7 +7,7 @@
     ../../modules/system/base.nix
   ];
 
-  networking.hostName = "minimal-setup";
+  networking.hostName = "work-setup";
 
   # Define the user luis and link his home-manager configuration
   users.users.luis = {
@@ -16,4 +16,3 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 }
-

@@ -52,6 +52,17 @@
 	          ./hosts/minimal-setup/configuration.nix
 	        ];  
         };
+
+        ##########################
+        #       work-setup       #
+        ##########################
+        work-setup = nixpkgs.lib.nixosSystem {
+	        specialArgs = {inherit inputs outputs;};
+	        modules = [
+	          ./hosts/work-setup/configuration.nix
+	        ];  
+        };
+
       };
 
       # Standalone home-manager configuration entrypoint

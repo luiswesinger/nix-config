@@ -59,6 +59,8 @@
     git
     tree
     btop
+    neofetch
+    eza
   ];
 
   system.stateVersion = "25.05";
