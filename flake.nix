@@ -1,6 +1,6 @@
 # flake.nix
 {
-  description = "A professional NixOS config for software development";	
+  description = "Don't try to understand this flake, I wrote it and still have no clue...";	
 
   inputs = {
 
@@ -13,49 +13,59 @@
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations = {
+  outputs = { 
+    self,
+    nixpkgs,
+    home-manager,
+    ... 
+    } @ inputs: let
+      inherit (self) outputs;
+      # Supported systems for flake packages, shell, etc.
+      systems = [
+        "x86_64-linux"
+      ];
+      
+      # Function that generates an attribute by calling a function you
+      # pass to it, with each system as an argument
+      forAllSystems = nixpkgs.lib.genAttrs systems;
+      in {
 
+        # nixosModules = import ./modules/nixos;
+        # overlays = import ./overlays {inherit inputs};
+        homeManagerModules = import ./modules/home-manager;
 
-      ##########################
-      #     first-test host    #
-      ##########################
-      first-test = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = inputs;
-        modules = [
-	  ./hosts/first-test/configuration.nix
-          #./modules/programs/neovim.nix
-	  #./modules/programs/kitty.nix
-	  #./modules/programs/vscode.nix
+      # NixOs configuration entrypoint
+      # Available through 'nixos-rebuild --flake .#hostname'
+      nixosConfigurations = {
 
-	  home-manager.nixosModules.home-manager
-	  {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.luis = import ./users/luis/home.nix;
-          }
-	];
+        ##########################
+        #	   minimal-setup       #
+        ##########################
+        minimal-setup = nixpkgs.lib.nixosSystem {
+	        specialArgs = {inherit inputs outputs;};
+	        modules = [
+	          ./hosts/minimal-setup/configuration.nix
+	        ];  
+        };
       };
 
-
-      ##########################
-      #	   second-test host    #
-      ##########################
-      second-test = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-	specialArgs = inputs;
-	modules = [
-	  ./hosts/second-test/configuration.nix
-	];
+      # Standalone home-manager configuration entrypoint
+      # Available through 'home-manager --flake .#luis@luis'
+      homeConfiguration = {
+        "luis@luis" = home-manager.lib.homeManagerConfiguration {
+          # Home-manager requires 'pkgs' instance
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = {inherit inputs outputs;};
+          modules = [
+            # main home-manager configuration file
+            ./home-manager/home.nix
+          ];
       };
-
-
     };
   };
 }

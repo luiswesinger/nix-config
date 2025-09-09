@@ -1,17 +1,13 @@
-# hosts/first-test/configuration.nix
+# hosts/second-test/configuration.nix
 { config, pkgs, lib, inputs, ...}:
 
 {
   imports = [
     ./hardware-configuration.nix
     ../../modules/system/base.nix
-    # ../../modules/security/agenix.nix
-    # You will create a separate file for your secrets from the example below
-    # and import it here.
-    # ./secrets.nix
   ];
 
-  networking.hostName = "first-test";
+  networking.hostName = "minimal-setup";
 
   # Define the user luis and link his home-manager configuration
   users.users.luis = {
@@ -22,3 +18,4 @@
 
   # home-manager.users.luis = import ../../users/luis/home.nix;
 }
+
