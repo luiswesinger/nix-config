@@ -9,8 +9,9 @@
 }: {
   imports = [
     # Modules which gets exported by the flake (from modules/home-manager):
+    ../modules/home-manager/nixvim.nix
     # outputs.homeManagerModules.example
-
+    inputs.self.homeManagerModules.default
   ];
 
   nixpkgs = {
@@ -29,6 +30,13 @@
     enable = true;
     userName = "Luis Wesinger";
     userEmail = "wesingerluis@gmail.com";
+  };
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      # add vscode extensions here
+    ];
   };
 
   # Nicely reload system units when changing configs

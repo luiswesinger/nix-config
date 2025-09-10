@@ -6,7 +6,8 @@
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     agenix.url = "github:ryantm/agenix";
-  
+    nixvim.url = "github:nix-community/nixvim";
+
     mysecrets = {
       url = "git@github.com:luiswesinger/secrets";
       flake = false;
@@ -21,6 +22,7 @@
   outputs = { 
     self,
     nixpkgs,
+    nixvim,
     home-manager,
     ... 
     } @ inputs: let
