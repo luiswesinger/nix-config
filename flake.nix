@@ -63,26 +63,13 @@
 	        modules = [
 	          ./hosts/work-setup/configuration.nix
 	        ]; 
-
-          # enable home-manager inside nixos
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.users.luis = {
-              imports = [
-                ./home-manager/home.nix
-                ];
-            };
-          }
         };
 
       };
 
       # Standalone home-manager configuration entrypoint
       # Available through 'home-manager --flake .#luis@luis'
-      homeConfiguration = {
+      homeConfigurations = {
         "luis@luis" = home-manager.lib.homeManagerConfiguration {
           # Home-manager requires 'pkgs' instance
           pkgs = nixpkgs.legacyPackages.x86_64-linux;

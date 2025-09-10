@@ -8,6 +8,7 @@
   ];
 
   networking.hostName = "work-setup";
+  nixpkgs.config.allowUnfree = true;
 
   # Define the user luis and link his home-manager configuration
   users.users.luis = {

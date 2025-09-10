@@ -1,8 +1,8 @@
-{ config, pkgs, nixvim, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
-    nixvim.homeManagerModules.nixvim
+    inputs.nixvim.homeModules.nixvim
   ];
 
   programs.nixvim = {
