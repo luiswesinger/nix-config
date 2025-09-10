@@ -62,7 +62,20 @@
 	        specialArgs = {inherit inputs outputs;};
 	        modules = [
 	          ./hosts/work-setup/configuration.nix
-	        ];  
+	        ]; 
+
+          # enable home-manager inside nixos
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+
+            home-manager.users.luis = {
+              imports = [
+                ./home-manager/home.nix
+                ];
+            };
+          }
         };
 
       };

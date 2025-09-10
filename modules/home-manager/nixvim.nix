@@ -8,7 +8,7 @@
   programs.nixvim = {
     enable = true;
   
-    colorschemes.catputccin.enable = true;
+    colorschemes.catppuccin.enable = true;
 
     plugins = {
       lualine.enable = true;
