@@ -7,7 +7,8 @@
   ...
 }: 
 {
-   imports = [
+  imports = [
+      # ./console.nix
       ./nixvim.nix
    ];
 
@@ -35,6 +36,12 @@
     spotify
     logseq
     discord
+    openvpn
+    gimp
+    obs-studio
+
+    # KDE-Plasma related stuff
+    kdePackages.kaccounts-providers
   ];
  
   programs.git = {
@@ -48,10 +55,11 @@
     package = pkgs.vscode;
   };
 
-  programs.zsh = {
+  programs.btop = {
     enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
+    settings = {
+      theme_background = false; # make btop transparent
+    };
   };
 
   home.stateVersion = "25.05";
