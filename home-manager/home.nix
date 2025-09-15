@@ -41,6 +41,8 @@
     obs-studio
 
     # KDE-Plasma related stuff
+    kdePackages.kio-gdrive
+    kdePackages.kaccounts-integration
     kdePackages.kaccounts-providers
   ];
  
