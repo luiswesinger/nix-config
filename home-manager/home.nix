@@ -30,7 +30,12 @@
     homeDirectory = "/home/luis";
   };
 
-  programs.home-manager.enable = true;  # enable home-manager
+  programs.home-manager.enable = true; 
+  home.packages = with pkgs; [
+    spotify
+    logseq
+    discord
+  ];
  
   programs.git = {
     enable = true;
