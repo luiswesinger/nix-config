@@ -48,5 +48,11 @@
     package = pkgs.vscode;
   };
 
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    syntaxHighlighting.enable = true;
+  };
+
   home.stateVersion = "25.05";
 }
