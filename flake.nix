@@ -39,7 +39,7 @@
       # --------------------------------------------
       #     University-Setup
       # --------------------------------------------
-      uni = nixpkgs.lib.nixSystem {
+      uni = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./nixos/configuration.nix

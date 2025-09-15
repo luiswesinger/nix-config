@@ -1,5 +1,5 @@
 # modules/system/base.nix
-{ config, pkgs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   # Bootloader
