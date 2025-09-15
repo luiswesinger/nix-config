@@ -4,15 +4,15 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/system/base.nix
+    ./modules/system/base.nix
   ];
 
-  networking.hostName = "minimal-setup";
+  networking.hostName = "uni";
 
   # Define the user luis and link his home-manager configuration
   users.users.luis = {
     isNormalUser = true;
-    description = "Luis";
+    description = "luis";
     extraGroups = [ "networkmanager" "wheel" ];
   };
 }

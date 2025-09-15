@@ -48,8 +48,16 @@
   services.printing.enable = true;
 
   # Nix settings
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nixpkgs.config.allowUnfree = true;
+  nix = let
+    flakeInputs = lib.filterAttrs (_:lib.isType "flake") inputs;
+  in {
+    settings = {
+      # Enable flakes and new 'nix' command
+      experimental-features = "nix-command flakes";
+      # Workaround for https://github.com/NixOS/nix/issues/9574
+      nix-path = config.nix.nixPath;
+    };
+  };
 
   # System packages
   environment.systemPackages = with pkgs; [

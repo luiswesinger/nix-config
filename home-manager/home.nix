@@ -1,22 +1,28 @@
-# home-manager.nix
+# home-manager/home.nix
 {
   inputs, 
-  outputs,
   lib,
   config,
   pkgs,
   ...
-}: {
-  imports = [
-    # Modules which gets exported by the flake (from modules/home-manager):
-    inputs.self.homeManagerModules.nixvim
-    # outputs.homeManagerModules.example
-    # inputs.self.homeManagerModules.default
-  ];
+}: 
+{
+   imports = [
+      ./nixvim.nix
+   ];
 
   nixpkgs = {
-    # add overlays if needed
+    overlays = [
+      # import overlays here
+    ];
+
+    # Configure nixpkgs instance
+    config = {
+      allowUnfree = true;
+      # Workaround for https://github.com/nix-community/home-manager/issues/2942
+      allowUnfreePredicate = _: true;
   };
+
 
   home = {
     username = "luis";
@@ -27,21 +33,14 @@
  
   programs.git = {
     enable = true;
-    userName = "Luis Wesinger";
+    userName = "Luis";
     userEmail = "wesingerluis@gmail.com";
   };
 
   programs.vscode = {
     enable = true;
     package = pkgs.vscode;
-    profiles.default.extensions = with pkgs.vscode-extensions; [
-      # add vscode extensions here
-      ms-python.python
-    ];
   };
-
-  # Nicely reload system units when changing configs
-  # systemd.user.startService = "sd-switch";
 
   home.stateVersion = "25.05";
 }
