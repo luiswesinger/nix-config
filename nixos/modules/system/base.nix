@@ -61,6 +61,7 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
+    home-manager
     neovim
     kitty
     firefox
