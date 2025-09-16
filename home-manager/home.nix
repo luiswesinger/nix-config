@@ -39,7 +39,8 @@
     openvpn
     gimp
     obs-studio
-
+    bitwarden-desktop	
+    
     # KDE-Plasma related stuff
     kdePackages.kio-gdrive
     kdePackages.kaccounts-integration
