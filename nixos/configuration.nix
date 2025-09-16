@@ -15,5 +15,7 @@
     description = "luis";
     extraGroups = [ "networkmanager" "wheel" ];
   };
+
+  programs.ssh.startAgent = true;
 }
 
