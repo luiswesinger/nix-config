@@ -14,8 +14,12 @@
     isNormalUser = true;
     description = "luis";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
   };
-
-  programs.ssh.startAgent = true;
+  
+  programs = {
+    ssh.startAgent = true;
+    zsh.enable = true;
+  };
 }
 
