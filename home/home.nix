@@ -34,7 +34,10 @@
     homeDirectory = "/home/luis";
   };
 
-  programs.home-manager.enable = true; 
+  programs.home-manager = {
+    enable = true;
+  };
+
   home.packages = with pkgs; [
     spotify
     logseq
