@@ -8,8 +8,11 @@
 }: 
 {
   imports = [
-      # ./console.nix
-      ./nixvim.nix
+      # console stuff
+      ./console/zsh.nix
+      ./console/starship.nix
+
+      ./programs/nixvim.nix
    ];
 
   nixpkgs = {
@@ -41,7 +44,6 @@
     obs-studio
     bitwarden-desktop
     bat
-    spotify-cli-linux
 
     # KDE-Plasma related stuff
     kdePackages.kio-gdrive
