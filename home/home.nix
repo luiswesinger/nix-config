@@ -41,7 +41,7 @@
     obs-studio
     bitwarden-desktop
     bat
-    spotify-cli
+    spotify-cli-linux
 
     # KDE-Plasma related stuff
     kdePackages.kio-gdrive
