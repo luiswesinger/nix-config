@@ -4,7 +4,6 @@
       enable = true;
       enableBashIntegration = true;
       enableZshIntegration = true;
-      enableAlacrittyIntegration = true;
 
       settings = {
 	character = {
