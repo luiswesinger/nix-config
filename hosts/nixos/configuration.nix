@@ -5,6 +5,7 @@
   imports = [
     ./hardware-configuration.nix
     ./modules/system/base.nix
+    ./modules/system/programming.nix
   ];
 
   networking.hostName = "uni";
