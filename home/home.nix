@@ -48,6 +48,10 @@
     bitwarden-desktop
     bat
 
+    brave
+    chromium
+    netflix
+
     # KDE-Plasma related stuff
     kdePackages.kio-gdrive
     kdePackages.kaccounts-integration
