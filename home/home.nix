@@ -43,6 +43,7 @@
     logseq
     discord
     openvpn
+    openfortivpn
     gimp
     obs-studio
     bitwarden-desktop

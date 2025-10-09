@@ -42,7 +42,7 @@
       uni = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          ./hosts/nixos/configuration.nix
+          ./hosts/laptop/configuration.nix
         ];
       };
     };
