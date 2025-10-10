@@ -12,6 +12,8 @@
       ./console/zsh.nix
       ./console/starship.nix
 
+      ./python.nix
+
       ./programs/nixvim.nix
    ];
 
