@@ -16,6 +16,7 @@
       ./cli/btop.nix
 
       ./programming/python.nix
+      ./programming/vscode.nix
 
    ];
 
