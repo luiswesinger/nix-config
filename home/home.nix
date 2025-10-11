@@ -13,6 +13,7 @@
       # console stuff
       ./cli/console/zsh.nix
       ./cli/console/starship.nix
+      ./cli/btop.nix
 
       ./programming/python.nix
 
@@ -61,17 +62,10 @@
     userEmail = "wesingerluis@gmail.com";
   };
 
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscode;
-  };
-
-  programs.btop = {
-    enable = true;
-    settings = {
-      theme_background = false; # make btop transparent
-    };
-  };
+  #programs.vscode = {
+    #enable = true;
+    #package = pkgs.vscode;
+  #};
 
   home.stateVersion = "25.05";
 }
