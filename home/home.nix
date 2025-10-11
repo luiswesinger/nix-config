@@ -49,8 +49,6 @@
     openfortivpn
     gimp
     obs-studio
-    bitwarden-desktop
-    bat
 
     brave
     chromium

@@ -70,6 +70,7 @@
     btop
     neofetch
     eza
+    bat
 
     bitwarden-desktop
   ];
