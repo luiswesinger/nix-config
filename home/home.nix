@@ -8,13 +8,14 @@
 }: 
 {
   imports = [
+      ./cli/nixvim.nix
+
       # console stuff
-      ./console/zsh.nix
-      ./console/starship.nix
+      ./cli/console/zsh.nix
+      ./cli/console/starship.nix
 
-      ./python.nix
+      ./programming/python.nix
 
-      ./programs/nixvim.nix
    ];
 
   nixpkgs = {

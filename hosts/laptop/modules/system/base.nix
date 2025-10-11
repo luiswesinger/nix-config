@@ -72,7 +72,6 @@
     eza
 
     bitwarden-desktop
-    bnitwarden-cli
   ];
 
   system.stateVersion = "25.05";
