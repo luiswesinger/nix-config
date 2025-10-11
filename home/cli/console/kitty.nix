@@ -5,13 +5,13 @@
     enable = true;
 
     settings = {
-      background_opacity = "0.9";
+      background_opacity = "0.8";
       dynamic_background_opacity = "yes";
       window_padding_width = 6;
       window_border_width = 1;
       window_margin_width = 3;
       window_rounding = 8; 
-      background_blur = 10;
+      background_blur = 8;
 
       # Colors from global nix-colors theme
       foreground = "#${config.colorScheme.palette.base05}";
