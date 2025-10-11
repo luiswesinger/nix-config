@@ -8,17 +8,26 @@
 }: 
 {
   imports = [
+      inputs.nix-colors.homeManagerModules.default
+
       ./cli/nixvim.nix
 
       # console stuff
       ./cli/console/zsh.nix
       ./cli/console/starship.nix
+      ./cli/console/kitty.nix
+      
       ./cli/btop.nix
 
       ./programming/python.nix
       ./programming/vscode.nix
 
+      ./appearance/gtk.nix
    ];
+ 
+   # Select one of this Colorschemes:
+   # https://github.com/tinted-theming/base16-schemes
+   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
   nixpkgs = {
     overlays = [
@@ -54,7 +63,6 @@
 
     brave
     chromium
-    netflix
   ];
  
   programs.git = {
@@ -63,10 +71,6 @@
     userEmail = "wesingerluis@gmail.com";
   };
 
-  #programs.vscode = {
-    #enable = true;
-    #package = pkgs.vscode;
-  #};
 
   home.stateVersion = "25.05";
 }
