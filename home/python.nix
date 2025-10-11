@@ -18,7 +18,7 @@
 	seaborn
 	scipy
 	mathutils
-	statsmodel
+	statsmodels
       ])
     )
   ];
