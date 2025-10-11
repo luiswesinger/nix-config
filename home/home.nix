@@ -55,11 +55,6 @@
     brave
     chromium
     netflix
-
-    # KDE-Plasma related stuff
-    kdePackages.kio-gdrive
-    kdePackages.kaccounts-integration
-    kdePackages.kaccounts-providers
   ];
  
   programs.git = {
