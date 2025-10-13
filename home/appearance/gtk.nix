@@ -32,14 +32,17 @@ in
       package = pkgs.dracula-theme;
     };
 
-    iconTheme = {
-      name = "Faltery-Indigo-Dark";
-      package = flatery-icon-theme;
-    };
-
     cursorTheme = {
       name = "Catppuccin-Mocha-Dark-Cursors";
       package = pkgs.catppuccin-cursors;
+    };
+
+    iconTheme = {
+      #name = "Dracula-Icon-Theme";
+      #package = pkgs.dracula-icon-theme;
+
+      name = "Flatery-Indigo-Dark";
+      package = flatery-icon-theme;
     };
 
     font.name = "0xProto Nerd Font Regular 11";
@@ -48,8 +51,9 @@ in
   fonts.fontconfig.enable = true;
   
   home.packages = with pkgs; [
-    dracula-theme
     flatery-icon-theme
+    dracula-icon-theme
+    dracula-theme
     catppuccin-cursors
     pkgs.nerd-fonts._0xproto
  ];

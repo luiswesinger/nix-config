@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.nixvim.colorschemes.gruvbox = {
+  programs.nixvim.colorschemes.catppuccin = {
     enable = true;
     settings = {
       contrast = "hard";
