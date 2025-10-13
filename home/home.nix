@@ -10,7 +10,7 @@
   imports = [
       inputs.nix-colors.homeManagerModules.default
 
-      ./cli/nixvim.nix
+      ./cli/nixvim/default.nix
 
       # console stuff
       ./cli/console/zsh.nix

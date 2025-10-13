@@ -7,12 +7,20 @@
 
   programs.nixvim = {
     enable = true;
-  
-    colorschemes.catppuccin.enable = true;
+
+    options = {
+      shiftwith = 2;
+      tabstop = 2;
+      expandtab = true;
+    };
+    
+    colorschemes.gruvbox.enable = true;
 
     plugins = {
       lualine.enable = true;
-      treesitter.enable = true;
+      #treesitter.enable = true;
+      neo-tree.enable = true;
+      telescope.enable = true;
 
     };
     

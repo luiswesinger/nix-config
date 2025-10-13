@@ -5,7 +5,7 @@
     enable = true;
 
     settings = {
-      background_opacity = "0.8";
+      background_opacity = "1";
       dynamic_background_opacity = "yes";
       window_padding_width = 6;
       window_border_width = 1;
