@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       options = {
-        theme = "gruvbox";
+        theme = "catppuccin";
       };
     };
   };
