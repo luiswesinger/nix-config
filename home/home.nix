@@ -18,6 +18,7 @@
       ./cli/console/kitty.nix
       
       ./cli/btop.nix
+      ./cli/cli_tools.nix
 
       ./programming/python.nix
       ./programming/vscode.nix
@@ -60,6 +61,7 @@
     openfortivpn
     gimp
     obs-studio
+    signal-desktop
 
     brave
     chromium

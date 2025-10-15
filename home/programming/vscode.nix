@@ -10,11 +10,16 @@
 
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
-        ms-python.vscode-pylance
+        #ms-python.vscode-pylance
         ms-python.isort
         ms-toolsai.jupyter
+	ms-toolsai.jupyter-keymap
+	ms-toolsai.vscode-jupyter-cell-tags
+	ms-toolsai.vscode-jupyter-slideshow
 
-        github.copilot
+	ms-vscode.cpptools
+
+        #github.copilot
         ms-vscode-remote.remote-ssh
 
         catppuccin.catppuccin-vsc
@@ -35,6 +40,8 @@
 	# -- Editor beahavoir -------------------------------
 	"editor.tabSize" = 2;
 	"editor.insertSpaces" = true;
+	"editor.minimap.enable" = true;
+	"editor.minimap.showSlider" = "always";
 
       };
     };
