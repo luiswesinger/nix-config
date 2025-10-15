@@ -1,4 +1,5 @@
- flake.nix
+# flake.nix
+
 {
   description = "Don't try to understand this flake, I wrote it and still have no clue...";	
 
