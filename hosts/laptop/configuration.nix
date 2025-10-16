@@ -7,6 +7,7 @@
     
     ../modules/system/base.nix
     ../modules/system/programming.nix
+    ../modules/tmp_programs.nix
   ];
 
   networking.hostName = "laptop";
