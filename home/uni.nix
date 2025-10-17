@@ -24,6 +24,8 @@
       ./programming/vscode.nix
 
       ./appearance/gtk.nix
+
+      ./tmp_modules/tmp.nix
    ];
  
    # Select one of this Colorschemes:
