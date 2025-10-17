@@ -31,9 +31,15 @@
     layout = "de";
     variant = "";
   };
+
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-
+  # services.desktopManager.budgie.enable = true;
+  
+  # If desktop env should be GNOME:
+  # services.displayManager.gdm.enable = true;
+  # services.desktopManager.gnome.enable = true;
+  
   # Sound
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;

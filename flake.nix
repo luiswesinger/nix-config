@@ -1,4 +1,5 @@
 # flake.nix
+
 {
   description = "Don't try to understand this flake, I wrote it and still have no clue...";	
 
@@ -30,7 +31,6 @@
     ... 
     } @ inputs: let
       inherit (self) outputs;
-    
     in {
 
     # NixOS System configuration entrypoint
@@ -38,12 +38,22 @@
     nixosConfigurations = {
 
       # --------------------------------------------
-      #     University-Setup
+      #    Laptop-Setup
       # --------------------------------------------
-      uni = nixpkgs.lib.nixosSystem {
+      laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./hosts/laptop/configuration.nix
+        ];
+      };
+
+      # --------------------------------------------
+      #    Desktop-Setup
+      # --------------------------------------------
+      desktop = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./hosts/desktop/configuration.nix
         ];
       };
     };
@@ -51,13 +61,28 @@
     # Standalone home-manager configuration entrypoint
     # Available thorugh 'home-manager --flake .#username@hostname'
     homeConfigurations = {
-      "luis@uni" = home-manager.lib.homeManagerConfiguration {
+
+      # -- home config for LAPTOP -- #
+      "luis@laptop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
-          ./home/home.nix
+	  # choose home config here
+          ./home/uni.nix
         ];
       };
+
+      # -- home config for DESKTOP -- #
+      "luis@desktop" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [
+	  # choose home config here
+          ./home/uni.nix
+	  #./home/leisure.nix
+        ];
+      };
+
     };
   };
 }

@@ -1,4 +1,4 @@
-# hosts/laptop/configuration.nix
+# hosts/desktop/configuration.nix
 { config, pkgs, lib, inputs, ...}:
 
 {
@@ -7,10 +7,9 @@
     
     ../modules/system/base.nix
     ../modules/system/programming.nix
-    ../modules/tmp_programs.nix
   ];
 
-  networking.hostName = "laptop";
+  networking.hostName = "uni";
 
   # Define the user luis and link his home-manager configuration
   users.users.luis = {
