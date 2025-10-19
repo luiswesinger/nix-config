@@ -3,6 +3,11 @@
 {
   programs.kitty = {
     enable = true;
+	
+    font = {
+          name = "Proto Nerd Font";
+          size = 11;
+    };
 
     settings = {
       background_opacity = "1";

@@ -21,6 +21,7 @@
       ./cli/cli_tools.nix
 
       ./programming/python.nix
+      ./programming/c++.nix
       ./programming/vscode.nix
 
       ./appearance/gtk.nix
