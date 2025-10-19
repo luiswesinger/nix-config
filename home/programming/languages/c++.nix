@@ -1,4 +1,4 @@
-# home/programming/c++.nix
+# home/programming/languages/c++.nix
 { pkgs, ... }: {
 
   home.packages = with pkgs; [

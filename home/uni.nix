@@ -20,9 +20,8 @@
       ./cli/btop.nix
       ./cli/cli_tools.nix
 
-      ./programming/python.nix
-      ./programming/c++.nix
-      ./programming/vscode.nix
+      # import programming modules
+      ./programming/default.nix
 
       ./appearance/gtk.nix
 
