@@ -38,11 +38,11 @@ in
     };
 
     iconTheme = {
-      #name = "Dracula-Icon-Theme";
-      #package = pkgs.dracula-icon-theme;
+      name = "Dracula-Icon-Theme";
+      package = pkgs.dracula-icon-theme;
 
-      name = "Flatery-Indigo-Dark";
-      package = flatery-icon-theme;
+      #name = "Flatery-Indigo-Dark";
+      #package = flatery-icon-theme;
     };
 
     font.name = "0xProto Nerd Font Regular 11";

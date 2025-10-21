@@ -4,7 +4,9 @@
 {
   imports = [
     ./hardware-configuration.nix
-    
+   
+    ../modules/desktop_environment/KdePlasma6.nix
+
     ../modules/system/base.nix
     ../modules/system/programming.nix
   ];

@@ -1,4 +1,4 @@
-# home-manager/uni.nix
+# home-manager/leisure.nix
 {
   inputs, 
   lib,
@@ -9,7 +9,6 @@
 {
   imports = [
       inputs.nix-colors.homeManagerModules.default
-
       ./cli/nixvim/default.nix
 
       # console stuff
@@ -20,12 +19,7 @@
       ./cli/btop.nix
       ./cli/cli_tools.nix
 
-      # import programming modules
-      ./programming/default.nix
-
       ./appearance/gtk.nix
-
-      #./tmp_modules/tmp.nix
    ];
  
    # Select one of this Colorschemes:
@@ -37,7 +31,6 @@
       # import overlays here
     ];
 
-    # Configure nixpkgs instance
     config = {
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
@@ -60,7 +53,6 @@
     logseq
     discord
     openvpn
-    openfortivpn
     gimp
     obs-studio
     signal-desktop
