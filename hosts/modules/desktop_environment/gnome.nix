@@ -3,6 +3,9 @@
 
 {
   services = {
+    # disbale gnome's keyring
+    gnome.gcr-ssh-agent.enable = false;
+
     xserver = {
       enable = true;
       xkb = {
@@ -24,7 +27,7 @@
   programs.dconf.enable = true;
 
   environment.systemPackages = with pkgs; [
-    gnome.gnome-tweaks
+    gnome-tweaks
     gnomeExtensions.caffeine
     gnomeExtensions.paperwm
     gnomeExtensions.clipboard-history

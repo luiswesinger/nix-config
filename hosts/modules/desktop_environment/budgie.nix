@@ -19,4 +19,5 @@
       budgie.enable = true;
     };
   };
+  programs.dconf.enable = true;
 }
