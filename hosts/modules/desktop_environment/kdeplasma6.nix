@@ -1,4 +1,4 @@
-# hosts/modules/desktop_environments/KdePlasma6.nix
+# hosts/modules/desktop_environments/kdeplasma6.nix
 { pkgs, ... }:
 
 {
