@@ -56,6 +56,7 @@
     gimp
     obs-studio
     signal-desktop
+    zoom
 
     brave
     chromium
