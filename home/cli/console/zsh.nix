@@ -15,7 +15,8 @@
 	desksys = "sudo nixos-rebuild switch --flake .#desktop";
 	deskhome = "home-manager switch --flake .#luis@desktop";
 	
-	gc = "~/./ssh-init.sh";
+	gc = "~/shell_scripts/ssh-init.sh";
+	sl = "~/shell_scripts/sync_logseq.sh";
 	ga = "git add .";
       };
     };
