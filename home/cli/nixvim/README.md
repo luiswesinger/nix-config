@@ -45,6 +45,14 @@ Alle Shortcuts beginnen mit dem **Leader Key**: `Space` ab jetzt deklariert als:
 
 ---
 
+## Markdown Preview
+| Shortcut      | Aktion |
+|---------------|--------|
+| `S mv`  | Aktiviert markview  |
+| `S md`  | Aktiviert markdown-preview im Browser |
+
+---
+
 ## Hinweise
 - Diese Keymaps wurden für **nvChad-ähnliche Konfigurationen** erstellt, funktionieren aber auch in jedem Neovim mit Lua-Setup.  
 - Du kannst die Leader-Key-Kombinationen in `extraConfigLua` anpassen, falls du ein anderes Präfix verwenden möchtest.  

@@ -1,3 +1,4 @@
+# /home/cli/nixvim/keymaps.nix
 {
   programs.nixvim.extraConfigLua = ''
     -- Leader Key
@@ -37,6 +38,18 @@
     map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', opts)
     map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', opts)
     map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', opts)
+
+    -- ==============================
+    -- Markdown-Preview 
+    -- ==============================
+    map('n', '<leader>mp', ':MarkdownPreviewToggle<CR>', opts) 
+
+    -- ==============================
+    -- Markview
+    -- ==============================
+    map('n', '<leader>mv', ':Markview<CR>', opts) 
+
+
   '';
 }
 
