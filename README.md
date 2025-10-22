@@ -10,7 +10,7 @@
 
 ## About NixOS
 
-NixOS is a Linux distribution built on the Nix package manager, known for its declarative configuration model and atomic, reproducible system builds. For further Information visit the [NixOS Homepage[(https://www.nixos.org)
+NixOS is a Linux distribution built on the Nix package manager, known for its declarative configuration model and atomic, reproducible system builds. For further Information visit the [NixOS Homepage](https://www.nixos.org)
 
 ## Installation
 
