@@ -5,7 +5,7 @@
   imports = [
     ./hardware-configuration.nix
    
-    ../modules/desktop_environment/gnome.nix
+    ../modules/desktop_environment/kdeplasma6.nix
 
     ../modules/system/base.nix
     ../modules/system/programming.nix

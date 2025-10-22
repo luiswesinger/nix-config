@@ -3,21 +3,24 @@
 
 {
   services = {
+    # disbale gnome's keyring
+    gnome.gcr-ssh-agent.enable = false;
+
     xserver = {
       enable = true;
       xkb = {
 	layout = "de";
 	variant = "";
       };
+      displayManager = {
+        lightdm.enable = true;
+      };
+
+      desktopManager = {
+        budgie.enable = true;
+      };
     };
 
-    displayManager = {
-      sddm.enable = true;
-    };
-
-    desktopManager = {
-      budgie.enable = true;
-    };
+    displayManager.defaultSession = "budgie-desktop";
   };
-  programs.dconf.enable = true;
 }
