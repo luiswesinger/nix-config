@@ -1,4 +1,4 @@
-# home-manager/uni.nix
+# home/uni.nix
 {
   inputs, 
   lib,
@@ -10,22 +10,22 @@
   imports = [
       inputs.nix-colors.homeManagerModules.default
 
+      # nixvim
       ./cli/nixvim/default.nix
 
-      # console stuff
-      ./cli/console/zsh.nix
-      ./cli/console/starship.nix
-      ./cli/console/kitty.nix
-      
+      # console
+      ./cli/console/default.nix
+
+      # additional cli modules
       ./cli/btop.nix
       ./cli/cli_tools.nix
 
-      # import programming modules
+      # programming modules
       ./programming/default.nix
 
       ./appearance/gtk.nix
 
-      ./apps/zathura.nix
+      ./apps/default.nix
    ];
  
    # Select one of this Colorschemes:
