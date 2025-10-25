@@ -5,7 +5,7 @@
     enable = true;
 	
     font = {
-          name = "Proto Nerd Font";
+          name = "Proto Nerd Font Mono";
           size = 11;
     };
 
