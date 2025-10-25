@@ -6,7 +6,7 @@
     ./neo-tree.nix
     ./lualine.nix
     ./markview.nix
-    # ./treesitter.nix
+    ./treesitter.nix
   ];
 }
 
