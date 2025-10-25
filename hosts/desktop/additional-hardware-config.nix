@@ -30,10 +30,6 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    
-    extraPackages = with pkgs; [
-      amdgpu_top
-    ];
   };
 
   # Wayland-Spezifische Anpassungen
@@ -49,4 +45,8 @@
     # Wayland-Spezifisches: Erzwinge die Nutzung der AMDGPU-Stack
     MESA_LOADER_DRIVER_OVERRIDE = lib.mkDefault "radeonsi"; 
   };
+
+  environment.systemPackages = with pkgs; [
+    amdgpu_top
+  ]; 
 }
