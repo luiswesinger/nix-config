@@ -4,6 +4,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./additional-hardware-config.nix
    
     ../modules/desktop_environment/kdeplasma6.nix
 

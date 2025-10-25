@@ -13,16 +13,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-gaming = {
-      url = "github:fufexan/nix-gaming";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     stylix = {
       url = "github:danth/stylix";
       inputs = {
 	nixpkgs.follows = "nixpkgs";
-	home-manager.follows = "home-manager";
       };
     };
 
