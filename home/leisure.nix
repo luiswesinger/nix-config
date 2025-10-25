@@ -20,6 +20,8 @@
       ./cli/cli_tools.nix
 
       ./appearance/gtk.nix
+
+      ./gaming/default.nix
    ];
  
    # Select one of this Colorschemes:

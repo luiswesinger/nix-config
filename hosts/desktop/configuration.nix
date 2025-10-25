@@ -11,6 +11,8 @@
     ../modules/system/base.nix
     ../modules/system/programming.nix
     ../modules/tmp_programs.nix
+
+    ../modules/programs/steam.nix
   ];
 
   networking.hostName = "leisure";
