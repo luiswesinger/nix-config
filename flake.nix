@@ -98,8 +98,7 @@
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
 	  # choose home config here
-          ./home/uni.nix
-	  #./home/leisure.nix
+	  ./home/leisure.nix
         ];
       };
 

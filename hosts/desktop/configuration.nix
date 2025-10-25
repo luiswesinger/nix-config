@@ -12,7 +12,7 @@
     ../modules/tmp_programs.nix
   ];
 
-  networking.hostName = "uni";
+  networking.hostName = "leisure";
 
   # Define the user luis and link his home-manager configuration
   users.users.luis = {
