@@ -25,7 +25,7 @@
 
       ./appearance/gtk.nix
 
-      #./tmp_modules/tmp.nix
+      ./apps/zathura.nix
    ];
  
    # Select one of this Colorschemes:
@@ -65,7 +65,7 @@
     obs-studio
     signal-desktop
     zoom-us
-
+    zathura
     brave
     chromium
   ];

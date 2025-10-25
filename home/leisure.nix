@@ -10,18 +10,17 @@
   imports = [
       inputs.nix-colors.homeManagerModules.default
       ./cli/nixvim/default.nix
-
-      # console stuff
       ./cli/console/zsh.nix
       ./cli/console/starship.nix
       ./cli/console/kitty.nix
-      
       ./cli/btop.nix
       ./cli/cli_tools.nix
 
       ./appearance/gtk.nix
 
       ./gaming/default.nix
+
+      ./apps/zathura.nix
    ];
  
    # Select one of this Colorschemes:
