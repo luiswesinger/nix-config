@@ -7,5 +7,6 @@
     gdb
     clang
     gcc
+    gnumake
   ];
 }
