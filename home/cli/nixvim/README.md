@@ -53,6 +53,14 @@ Alle Shortcuts beginnen mit dem **Leader Key**: `Space` ab jetzt deklariert als:
 
 ---
 
+## Zathura
+| Shortcut      | Aktion |
+|---------------|--------|
+| `S z`   | Öffnet aktuell in vim geöffnetes PDF in zathura|  
+
+---
+
+
 ## Hinweise
 - Diese Keymaps wurden für **nvChad-ähnliche Konfigurationen** erstellt, funktionieren aber auch in jedem Neovim mit Lua-Setup.  
 - Du kannst die Leader-Key-Kombinationen in `extraConfigLua` anpassen, falls du ein anderes Präfix verwenden möchtest.  
