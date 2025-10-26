@@ -6,6 +6,8 @@
     cmake
     clang
     eigen # linear algebra algorithms
+
+    cppman
   ];
 
 }
