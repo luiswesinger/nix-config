@@ -9,7 +9,8 @@
 {
   imports = [
       inputs.nix-colors.homeManagerModules.default
-      ./cli/nixvim/default.nix
+      ./cli/nvchad.nix
+      # ./cli/nixvim/default.nix
       ./cli/console/default.nix
       ./cli/btop.nix
       ./cli/cli_tools.nix
