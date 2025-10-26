@@ -10,7 +10,8 @@
   imports = [
       inputs.nix-colors.homeManagerModules.default
 
-      ./cli/nixvim/default.nix
+      ./cli/nvchad.nix
+      #./cli/nixvim/default.nix
 
       # console stuff
       ./cli/console/zsh.nix
@@ -34,7 +35,9 @@
 
   nixpkgs = {
     overlays = [
-      # import overlays here
+      (final: prev: {
+        nvchad = inputs.nix4nvchad.packages."${pkgs.system}".nvchad;
+      })
     ];
 
     # Configure nixpkgs instance
