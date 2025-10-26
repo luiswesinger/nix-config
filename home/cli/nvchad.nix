@@ -37,8 +37,19 @@
     '';
 
     extraConfig = ''
+      -- Markdown previews
       vim.keymap.set("n", "<leader>mg", ":Glow<CR>", { desc = "Markdown Glow preview" })
       vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>", { desc = "Markdown Browser preview" })
+      
+      -- Open PDF in Zathura
+      vim.keymap.set("n", "<leader>z", function()
+        local file = vim.fn.expand("%:p")
+        if file:match("%.pdf$") then
+          vim.fn.jobstart({ "zathura", file }, { detach = true })
+        else
+          print("Not a PDF file.")
+        end
+      end, { desc = "Open current PDF in Zathura" })
     '';
 
   };
