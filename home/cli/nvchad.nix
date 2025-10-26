@@ -8,5 +8,45 @@
   
   programs.nvchad = {
     enable = true;
+    # Add custom plugins directly here:
+    extraPlugins = ''
+      return {
+        -- Terminal-based Markdown preview
+        {
+          "ellisonleao/glow.nvim",
+          cmd = "Glow",
+          config = function()
+            require("glow").setup({
+              style = "dark",
+              width = 120,
+            })
+          end,
+        },
+
+        -- Browser-based Markdown preview
+        {
+          "iamcco/markdown-preview.nvim",
+          build = "cd app && yarn install",
+          ft = { "markdown" },
+          config = function()
+            vim.g.mkdp_auto_start = 0
+            vim.g.mkdp_browser = "firefox" -- or "chromium"
+          end,
+        },
+      }
+    '';
+
+    extraConfig = ''
+      vim.keymap.set("n", "<leader>mg", ":Glow<CR>", { desc = "Markdown Glow preview" })
+      vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>", { desc = "Markdown Browser preview" })
+    '';
+
   };
+  
+  # dependencies
+  home.packages = with pkgs; [
+    glow
+    yarn
+    nodejs
+  ];
 }

@@ -35,27 +35,36 @@ home-manager switch --flake .#luis@laptop
 ├── home
 │   ├── appearance
 │   │   └── gtk.nix
+│   ├── apps
+│   │   ├── default.nix
+│   │   ├── geckodriver.nix
+│   │   └── zathura.nix
 │   ├── cli
 │   │   ├── btop.nix
 │   │   ├── cli_tools.nix
 │   │   ├── console
+│   │   │   ├── default.nix
 │   │   │   ├── kitty.nix
 │   │   │   ├── starship.nix
 │   │   │   └── zsh.nix
-│   │   └── nixvim
-│   │       ├── colorscheme.nix
-│   │       ├── default.nix
-│   │       ├── keymaps.nix
-│   │       ├── options.nix
-│   │       ├── plugins
-│   │       │   ├── init.nix
-│   │       │   ├── lualine.nix
-│   │       │   ├── markdown-preview.nix
-│   │       │   ├── markview.nix
-│   │       │   ├── neo-tree.nix
-│   │       │   ├── telescope.nix
-│   │       │   └── treesitter.nix
-│   │       └── README.md
+│   │   ├── nixvim
+│   │   │   ├── colorscheme.nix
+│   │   │   ├── default.nix
+│   │   │   ├── keymaps.nix
+│   │   │   ├── options.nix
+│   │   │   ├── plugins
+│   │   │   │   ├── init.nix
+│   │   │   │   ├── lualine.nix
+│   │   │   │   ├── markdown-preview.nix
+│   │   │   │   ├── markview.nix
+│   │   │   │   ├── neo-tree.nix
+│   │   │   │   ├── telescope.nix
+│   │   │   │   └── treesitter.nix
+│   │   │   └── README.md
+│   │   └── nvchad.nix
+│   ├── gaming
+│   │   ├── default.nix
+│   │   └── proton.nix
 │   ├── leisure.nix
 │   ├── programming
 │   │   ├── default.nix
@@ -67,16 +76,18 @@ home-manager switch --flake .#luis@laptop
 │   │       ├── c++.nix
 │   │       ├── example_python_flake.md
 │   │       └── python.nix
-│   ├── tmp_modules
-│   │   └── tmp.nix
 │   └── uni.nix
 ├── hosts
 │   ├── desktop
-│   │   └── configuration.nix
+│   │   ├── additional-hardware-config.nix
+│   │   ├── configuration.nix
+│   │   └── hardware-configuration.nix
 │   ├── laptop
 │   │   ├── configuration.nix
 │   │   └── hardware-configuration.nix
 │   └── modules
+│       ├── apps
+│       │   └── steam.nix
 │       ├── desktop_environment
 │       │   ├── budgie.nix
 │       │   ├── gnome.nix

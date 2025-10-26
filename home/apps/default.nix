@@ -4,4 +4,5 @@
     # ./geckodriver.nix
     ./zathura.nix
   ];
+
 }
