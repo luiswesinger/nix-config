@@ -1,4 +1,4 @@
-# home-manager/leisure.nix
+# home/leisure.nix
 {
   inputs, 
   lib,
@@ -10,9 +10,7 @@
   imports = [
       inputs.nix-colors.homeManagerModules.default
       ./cli/nixvim/default.nix
-      ./cli/console/zsh.nix
-      ./cli/console/starship.nix
-      ./cli/console/kitty.nix
+      ./cli/console/default.nix
       ./cli/btop.nix
       ./cli/cli_tools.nix
 
@@ -20,7 +18,7 @@
 
       ./gaming/default.nix
 
-      ./apps/zathura.nix
+      ./apps/default.nix
    ];
  
    # Select one of this Colorschemes:
@@ -48,6 +46,7 @@
   programs.home-manager = {
     enable = true;
   };
+  
 
   home.packages = with pkgs; [
     spotify
