@@ -7,5 +7,6 @@
     ripgrep
     gemini-cli
     chatgpt-cli
+    cursor-cli
   ];
 }
