@@ -33,6 +33,25 @@
             vim.g.mkdp_browser = "firefox" -- or "chromium"
           end,
         },
+
+        -- CSV/TSV Viewer
+        {
+          "hat0uma/csvview.nvim",
+          opts = {
+            parser = { comments = { "#", "//" } },
+            keymaps = {
+              -- Text objects for selecting fields
+              textobject_field_inner = { "if", mode = { "o", "x" } },
+              textobject_field_outer = { "af", mode = { "o", "x" } },
+              -- Excel-like navigation
+              jump_next_field_end = { "<Tab>", mode = { "n", "v" } },
+              jump_prev_field_end = { "<S-Tab>", mode = { "n", "v" } },
+              jump_next_row = { "<Enter>", mode = { "n", "v" } },
+              jump_prev_row = { "<S-Enter>", mode = { "n", "v" } },
+            },
+          },
+          cmd = { "CsvViewEnable", "CsvViewDisable", "CsvViewToggle" },
+        },
       }
     '';
 
@@ -40,6 +59,9 @@
       -- Markdown previews
       vim.keymap.set("n", "<leader>mg", ":Glow<CR>", { desc = "Markdown Glow preview" })
       vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>", { desc = "Markdown Browser preview" })
+
+      -- CSV View
+      vim.keymap.set("n", "<leader>cv", ":CsvViewToggle display_mode=border<CR>", { desc = "CSV Toggle CSV border view" })
       
       -- Open PDF in Zathura
       vim.keymap.set("n", "<leader>z", function()
@@ -49,7 +71,7 @@
         else
           print("Not a PDF file.")
         end
-      end, { desc = "Open current PDF in Zathura" })
+      end, { desc = "PDF Open current PDF in Zathura" })
     '';
 
   };
