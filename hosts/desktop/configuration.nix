@@ -13,6 +13,7 @@
     ../modules/tmp_programs.nix
 
     ../modules/apps/steam.nix
+    ../modules/apps/flatpak.nix
   ];
 
   networking.hostName = "leisure";

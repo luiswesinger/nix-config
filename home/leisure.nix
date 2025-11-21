@@ -52,7 +52,7 @@
   home.packages = with pkgs; [
     spotify
     logseq
-    discord
+    #discord
     openvpn
     gimp
     obs-studio
