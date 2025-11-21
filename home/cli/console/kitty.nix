@@ -6,7 +6,7 @@
 	
     font = {
           name = "Proto Nerd Font Mono";
-          size = 11;
+          size = 13;
     };
 
     settings = {
