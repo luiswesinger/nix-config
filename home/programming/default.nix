@@ -1,7 +1,5 @@
 { 
   imports = [
-    ./ssh.nix
-
     ./editors/R.nix
     ./editors/vscode.nix
 
