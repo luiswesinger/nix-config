@@ -20,6 +20,8 @@
       ./gaming/default.nix
 
       ./apps/default.nix
+
+      ./programming/default.nix
    ];
  
    # Select one of this Colorschemes:
