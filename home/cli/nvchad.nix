@@ -1,5 +1,5 @@
 # /home/cli/nvchad.nix
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, lib, ... }:
 
 {
   imports = [
@@ -56,6 +56,12 @@
     '';
 
     extraConfig = ''
+      -- Show hidden files in nvim-tree
+      require("nvim-tree").setup({
+        filters = {
+          dotfiles = false,
+        },
+      })
       -- Markdown previews
       vim.keymap.set("n", "<leader>mg", ":Glow<CR>", { desc = "Markdown Glow preview" })
       vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>", { desc = "Markdown Browser preview" })
@@ -76,6 +82,14 @@
 
   };
   
+  home.activation.backupNvChad = lib.mkForce (lib.hm.dag.entryBefore ["checkLinkTargets"] ''
+    if [ -d "$HOME/.config/nvim" ] && [ ! -L "$HOME/.config/nvim" ]; then
+      echo "Moving manual nvim config to nvim.bak"
+      rm -rf "$HOME/.config/nvim.bak"
+      mv "$HOME/.config/nvim" "$HOME/.config/nvim.bak"
+    fi
+  '');
+
   # dependencies
   home.packages = with pkgs; [
     glow
