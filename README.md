@@ -30,6 +30,7 @@ home-manager switch --flake .#luis@laptop
 ## Repo-Tree
 
 ```
+.
 ├── flake.lock
 ├── flake.nix
 ├── home
@@ -87,6 +88,7 @@ home-manager switch --flake .#luis@laptop
 │   │   └── hardware-configuration.nix
 │   └── modules
 │       ├── apps
+│       │   ├── flatpak.nix
 │       │   └── steam.nix
 │       ├── desktop_environment
 │       │   ├── budgie.nix
@@ -94,10 +96,14 @@ home-manager switch --flake .#luis@laptop
 │       │   └── kdeplasma6.nix
 │       ├── system
 │       │   ├── base.nix
+│       │   ├── overlays.nix
 │       │   └── programming.nix
 │       └── tmp_programs.nix
 ├── LICENSE
-└── README.md
+├── README.md
+└── scripts
+    ├── ssh-init.sh
+    └── sync_logseq.sh
 ```
 
 <!-- LICENSE -->
