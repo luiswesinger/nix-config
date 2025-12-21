@@ -27,19 +27,19 @@
    # Select one of this Colorschemes:
    # https://github.com/tinted-theming/base16-schemes
    colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
-
-  nixpkgs = {
-    overlays = [
-      # import overlays here
-    ];
-
-    config = {
-      allowUnfree = true;
-      # Workaround for https://github.com/nix-community/home-manager/issues/2942
-      allowUnfreePredicate = _: true;
-    };
-  };
-
+  #
+  # nixpkgs = {
+  #   overlays = [
+  #     # import overlays here
+  #   ];
+  #
+  #   config = {
+  #     allowUnfree = true;
+  #     # Workaround for https://github.com/nix-community/home-manager/issues/2942
+  #     allowUnfreePredicate = _: true;
+  #   };
+  # };
+  #
 
   home = {
     username = "luis";

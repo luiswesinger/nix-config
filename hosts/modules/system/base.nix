@@ -2,6 +2,13 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
+  # Global Package permissions
+  nixpkgs.config = {
+    allowUnfree = true;
+    # Workaround for https://github.com/nix-community/home-manager/issues/2942
+    allowUnfreePredicate = _: true;
+  };
+
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

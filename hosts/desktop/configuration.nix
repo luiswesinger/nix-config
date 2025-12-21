@@ -10,6 +10,8 @@
 
     ../modules/system/base.nix
     ../modules/system/programming.nix
+    ../modules/system/overlays.nix
+
     ../modules/tmp_programs.nix
 
     ../modules/apps/steam.nix

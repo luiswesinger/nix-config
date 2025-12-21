@@ -21,7 +21,7 @@
     stylix = {
       url = "github:danth/stylix";
       inputs = {
-	nixpkgs.follows = "nixpkgs";
+      	nixpkgs.follows = "nixpkgs";
       };
     };
 
@@ -48,9 +48,7 @@
     nixpkgs,
     home-manager,
     ... 
-    } @ inputs: let
-      inherit (self) outputs;
-    in {
+    } @ inputs: {
 
     # NixOS System configuration entrypoint
     # Available thorugh 'sudo nixos-rebuild switch --flake .#hostname'
@@ -60,8 +58,16 @@
       #    Laptop-Setup
       # --------------------------------------------
       laptop = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
+        specialArgs = {inherit inputs;};
         modules = [
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.luis = import ./home/uni.nix;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.backupFileExtension = "backup";
+          }
           ./hosts/laptop/configuration.nix
         ];
       };
@@ -70,37 +76,19 @@
       #    Desktop-Setup
       # --------------------------------------------
       desktop = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
+        specialArgs = {inherit inputs;};
         modules = [
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.luis = import ./home/leisure.nix;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.backupFileExtension = "backup";
+          }
           ./hosts/desktop/configuration.nix
         ];
       };
-    };
-
-    # Standalone home-manager configuration entrypoint
-    # Available thorugh 'home-manager --flake .#username@hostname'
-    homeConfigurations = {
-
-      # -- home config for LAPTOP -- #
-      "luis@laptop" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [
-	  # choose home config here
-          ./home/uni.nix
-        ];
-      };
-
-      # -- home config for DESKTOP -- #
-      "luis@desktop" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [
-	  # choose home config here
-	  ./home/leisure.nix
-        ];
-      };
-
     };
   };
 }
