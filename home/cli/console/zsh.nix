@@ -6,7 +6,7 @@
       syntaxHighlighting.enable = true;
 
       shellAliases = {
-        ll = "eza -l";
+        ll = "eza -la";
       	tr = "eza -T";
 
       	lapsys = "sudo nixos-rebuild switch --flake .#laptop";
