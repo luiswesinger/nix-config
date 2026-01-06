@@ -45,6 +45,13 @@
   # Printing
   services.printing.enable = true;
 
+  # Tailscale for remote work 
+  services.tailscale.enable = true;
+
+  # ensure firewall allows tailscale traffic
+  networking.firewall.checkReversePath = "loose";
+  networking.firewall.allowedUDPPorts = [ 41641 ];
+
   # Nix settings
   nix = let
     flakeInputs = lib.filterAttrs (_:lib.isType "flake") inputs;
