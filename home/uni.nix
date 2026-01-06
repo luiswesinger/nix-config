@@ -58,10 +58,8 @@
  
   programs.git = {
     enable = true;
-    settings.user = {
-      name = "luis";
-      email = "wesingerluis@gmail.com";
-    };
+    name = "luis";
+    email = "wesingerluis@gmail.com";
   };
 
 
