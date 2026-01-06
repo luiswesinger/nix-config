@@ -9,8 +9,11 @@
 {
   imports = [
       inputs.nix-colors.homeManagerModules.default
+
       ./cli/nvchad.nix
       # ./cli/nixvim/default.nix
+
+      # console
       ./cli/console/default.nix
       ./cli/btop.nix
       ./cli/cli_tools.nix
@@ -27,21 +30,8 @@
    # Select one of this Colorschemes:
    # https://github.com/tinted-theming/base16-schemes
    colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
-  #
-  # nixpkgs = {
-  #   overlays = [
-  #     # import overlays here
-  #   ];
-  #
-  #   config = {
-  #     allowUnfree = true;
-  #     # Workaround for https://github.com/nix-community/home-manager/issues/2942
-  #     allowUnfreePredicate = _: true;
-  #   };
-  # };
-  #
-
-  home = {
+ 
+ home = {
     username = "luis";
     homeDirectory = "/home/luis";
   };
@@ -67,7 +57,7 @@
  
   programs.git = {
     enable = true;
-    userName = "Luis";
+    userName = "luis";
     userEmail = "wesingerluis@gmail.com";
   };
 

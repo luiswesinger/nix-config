@@ -32,22 +32,6 @@
    # https://github.com/tinted-theming/base16-schemes
    colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
-  # nixpkgs = {
-  #   overlays = [
-  #     (final: prev: {
-  #       nvchad = inputs.nix4nvchad.packages."${pkgs.system}".nvchad;
-  #     })
-  #   ];
-  #
-  #   # Configure nixpkgs instance
-  #   config = {
-  #     allowUnfree = true;
-  #     # Workaround for https://github.com/nix-community/home-manager/issues/2942
-  #     allowUnfreePredicate = _: true;
-  #   };
-  # };
-  #
-
   home = {
     username = "luis";
     homeDirectory = "/home/luis";

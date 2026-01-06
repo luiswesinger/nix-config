@@ -14,7 +14,7 @@
     ../modules/tmp_programs.nix
   ];
 
-  networking.hostName = "laptop";
+  networking.hostName = "hp-laptop-luis";
 
   # Define the user luis and link his home-manager configuration
   users.users.luis = {

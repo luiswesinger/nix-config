@@ -18,7 +18,7 @@
     ../modules/apps/flatpak.nix
   ];
 
-  networking.hostName = "leisure";
+  networking.hostName = "desktop-luis";
 
   # Define the user luis and link his home-manager configuration
   users.users.luis = {

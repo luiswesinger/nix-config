@@ -3,7 +3,7 @@
 
 {
   home.packages = with pkgs; [
-    protonup
+    protonup-ng
   ];
 
   # DONT FORGET THE "protonup" COMMAND AFTER INSTALL!
