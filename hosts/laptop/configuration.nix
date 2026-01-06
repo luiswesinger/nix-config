@@ -7,7 +7,8 @@
    
     ../modules/desktop_environment/kdeplasma6.nix
 
-    ../modules/system/base.nix
+    ../modules/system/base/default.nix
+
     ../modules/system/programming.nix
     ../modules/system/overlays.nix
 
