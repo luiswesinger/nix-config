@@ -11,8 +11,6 @@
 
     ../modules/system/programming.nix
     ../modules/system/overlays.nix
-
-    ../modules/tmp_programs.nix
   ];
 
   networking.hostName = "hp-laptop-luis";

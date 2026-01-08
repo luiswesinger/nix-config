@@ -18,13 +18,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # stylix = {
-    #   url = "github:danth/stylix";
-    #   inputs = {
-    #   	nixpkgs.follows = "nixpkgs";
-    #   };
-    # };
-    #
     base16.url = "github:SenchoPens/base16.nix";
 
     hyprland = {
@@ -43,12 +36,12 @@
     };
   };
 
-  outputs = { 
+  outputs = {
     self,
     nixpkgs,
     home-manager,
-    ... 
-    } @ inputs: {
+    ...
+  } @ inputs: {
 
     # NixOS System configuration entrypoint
     # Available thorugh 'sudo nixos-rebuild switch --flake .#hostname'
@@ -64,7 +57,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.luis = import ./home/uni.nix;
+            home-manager.users.luis = import ./home;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.backupFileExtension = "backup";
           }
@@ -82,7 +75,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.luis = import ./home/leisure.nix;
+            home-manager.users.luis = import ./home;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.backupFileExtension = "backup";
           }
