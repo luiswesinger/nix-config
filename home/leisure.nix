@@ -9,6 +9,7 @@
 {
   imports = [
       inputs.nix-colors.homeManagerModules.default
+      ./git.nix
 
       ./cli/nvchad.nix
       # ./cli/nixvim/default.nix
@@ -55,12 +56,5 @@
     chromium
   ];
  
-  programs.git = {
-    enable = true;
-    userName = "luis";
-    userEmail = "wesingerluis@gmail.com";
-  };
-
-
   home.stateVersion = "25.05";
 }
