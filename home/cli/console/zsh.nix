@@ -9,11 +9,11 @@
         ll = "eza -la";
       	tr = "eza -T";
 
-      	lapsys = "sudo nixos-rebuild switch --flake .#laptop";
-	      desksys = "sudo nixos-rebuild switch --flake .#desktop";
+      	lap = "sudo nixos-rebuild switch --flake .#laptop";
+	      desk = "sudo nixos-rebuild switch --flake .#desktop";
 	
-      	gc = "~/shell_scripts/ssh-init.sh";
-      	sl = "~/shell_scripts/sync_logseq.sh";
+      	#gc = "~/shell_scripts/ssh-init.sh";
+      	sl = "~/nix-config/scripts/sync_logseq.sh";
       	ga = "git add .";
       };
     };
