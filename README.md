@@ -20,12 +20,6 @@ Move your `hardware-configuration.nix` file in `/hosts/laptop/` and deploy the f
 sudo nixos-rebuild switch --flake .#laptop
 ```
 
-Activate the home-setup with:
-
-```
-home-manager switch --flake .#luis@laptop
-```
-
 
 ## Repo-Tree
 
@@ -48,7 +42,6 @@ home-manager switch --flake .#luis@laptop
 │   │   │   ├── kitty.nix
 │   │   │   ├── starship.nix
 │   │   │   └── zsh.nix
-│   │   ├── nixvim
 │   │   │   ├── colorscheme.nix
 │   │   │   ├── default.nix
 │   │   │   ├── keymaps.nix
