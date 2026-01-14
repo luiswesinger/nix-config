@@ -41,9 +41,13 @@ sudo nixos-rebuild switch --flake .#laptop
 │   │   ├── cli_tools.nix
 │   │   ├── console
 │   │   │   ├── default.nix
+│   │   │   ├── fastfetch.nix
+│   │   │   ├── fastfetch_logo
+│   │   │   │   └── gengar.txt
 │   │   │   ├── kitty.nix
 │   │   │   ├── starship.nix
 │   │   │   └── zsh.nix
+│   │   ├── nixvim
 │   │   │   ├── colorscheme.nix
 │   │   │   ├── default.nix
 │   │   │   ├── keymaps.nix
@@ -58,9 +62,12 @@ sudo nixos-rebuild switch --flake .#laptop
 │   │   │   │   └── treesitter.nix
 │   │   │   └── README.md
 │   │   └── nvchad.nix
+│   ├── common.nix
+│   ├── default.nix
 │   ├── gaming
 │   │   ├── default.nix
 │   │   └── proton.nix
+│   ├── git.nix
 │   ├── leisure.nix
 │   ├── programming
 │   │   ├── default.nix
@@ -89,11 +96,14 @@ sudo nixos-rebuild switch --flake .#laptop
 │       │   ├── budgie.nix
 │       │   ├── gnome.nix
 │       │   └── kdeplasma6.nix
-│       ├── system
-│       │   ├── base.nix
-│       │   ├── overlays.nix
-│       │   └── programming.nix
-│       └── tmp_programs.nix
+│       └── system
+│           ├── base
+│           │   ├── base.nix
+│           │   ├── default.nix
+│           │   ├── nix_ld.nix
+│           │   └── openssh.nix
+│           ├── overlays.nix
+│           └── programming.nix
 ├── LICENSE
 ├── README.md
 └── scripts
