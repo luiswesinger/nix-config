@@ -15,6 +15,8 @@
       	#gc = "~/shell_scripts/ssh-init.sh";
       	sl = "~/nix-config/scripts/sync_logseq.sh";
       	ga = "git add .";
+
+        gpu = "amdgpu_top --gui";
       };
     };
   };

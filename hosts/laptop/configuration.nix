@@ -31,6 +31,11 @@
       size = 4096;
     }
   ];
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
   
   programs = {
     zsh.enable = true;
