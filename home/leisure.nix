@@ -3,6 +3,8 @@
 
 {
   imports = [
+    ./common.nix
     ./gaming/default.nix
+    ./programming/editors/vscodium.nix
   ];
 }

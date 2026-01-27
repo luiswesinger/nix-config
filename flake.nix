@@ -57,7 +57,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.luis = import ./home;
+            home-manager.users.luis = import ./home/uni.nix;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.backupFileExtension = "backup";
           }
@@ -75,7 +75,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.luis = import ./home;
+            home-manager.users.luis = import ./home/leisure.nix;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.backupFileExtension = "backup";
           }
