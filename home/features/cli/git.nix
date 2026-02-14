@@ -1,4 +1,4 @@
-# home/git.nix
+# home/features/cli/git.nix
 {
   programs.git = {
     enable = true;

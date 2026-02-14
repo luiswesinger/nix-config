@@ -4,15 +4,15 @@
 {
   imports = [
     inputs.nix-colors.homeManagerModules.default
-    ./git.nix
-    ./cli/nvchad.nix
-    #./cli/nixvim/default.nix
-    ./cli/console/default.nix
-    ./cli/btop.nix
-    ./cli/cli_tools.nix
-    ./appearance/gtk.nix
-    ./apps/default.nix
-    ./programming/default.nix
+    ./features/cli/git.nix
+    ./features/cli/nvchad.nix
+    #./features/cli/nixvim/default.nix
+    ./features/cli/console/default.nix
+    ./features/cli/btop.nix
+    ./features/cli/cli_tools.nix
+    ./features/appearance/gtk.nix
+    ./features/apps/default.nix
+    ./features/programming/default.nix
   ];
 
   # Select one of this Colorschemes:
