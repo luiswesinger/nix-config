@@ -40,7 +40,6 @@
         "latex-workshop.view.pdf.internal.synctex.keybinding" = "double-click"; 
 
         # -- Editor appearance -----------------------------
-        "workbench.colorTheme" = "Catppuccin Mocha";
         "window.zoomLevel" = 1;
         
         # -- File handling ----------------------------------

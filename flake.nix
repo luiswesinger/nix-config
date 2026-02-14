@@ -30,6 +30,8 @@
       flake = false;
     };
 
+    stylix.url = "github:danth/stylix";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
