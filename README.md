@@ -30,56 +30,58 @@ sudo nixos-rebuild switch --flake .#laptop
 ├── flake.lock
 ├── flake.nix
 ├── home
-│   ├── appearance
-│   │   └── gtk.nix
-│   ├── apps
-│   │   ├── default.nix
-│   │   ├── geckodriver.nix
-│   │   └── zathura.nix
-│   ├── cli
-│   │   ├── btop.nix
-│   │   ├── cli_tools.nix
-│   │   ├── console
-│   │   │   ├── default.nix
-│   │   │   ├── fastfetch.nix
-│   │   │   ├── fastfetch_logo
-│   │   │   │   └── gengar.txt
-│   │   │   ├── kitty.nix
-│   │   │   ├── starship.nix
-│   │   │   └── zsh.nix
-│   │   ├── nixvim
-│   │   │   ├── colorscheme.nix
-│   │   │   ├── default.nix
-│   │   │   ├── keymaps.nix
-│   │   │   ├── options.nix
-│   │   │   ├── plugins
-│   │   │   │   ├── init.nix
-│   │   │   │   ├── lualine.nix
-│   │   │   │   ├── markdown-preview.nix
-│   │   │   │   ├── markview.nix
-│   │   │   │   ├── neo-tree.nix
-│   │   │   │   ├── telescope.nix
-│   │   │   │   └── treesitter.nix
-│   │   │   └── README.md
-│   │   └── nvchad.nix
 │   ├── common.nix
-│   ├── default.nix
-│   ├── gaming
-│   │   ├── default.nix
-│   │   └── proton.nix
-│   ├── git.nix
-│   ├── leisure.nix
-│   ├── programming
-│   │   ├── default.nix
-│   │   ├── editors
-│   │   │   ├── R.nix
-│   │   │   ├── vscode.nix
-│   │   │   └── vscodium.nix
-│   │   └── languages
-│   │       ├── c++.nix
-│   │       ├── example_python_flake.md
-│   │       └── python.nix
-│   └── uni.nix
+│   ├── features
+│   │   ├── appearance
+│   │   │   └── stylix.nix
+│   │   ├── apps
+│   │   │   ├── default.nix
+│   │   │   ├── geckodriver.nix
+│   │   │   ├── unixtools.nix
+│   │   │   └── zathura.nix
+│   │   ├── cli
+│   │   │   ├── btop.nix
+│   │   │   ├── cli_tools.nix
+│   │   │   ├── console
+│   │   │   │   ├── default.nix
+│   │   │   │   ├── fastfetch.nix
+│   │   │   │   ├── fastfetch_logo
+│   │   │   │   │   └── gengar.txt
+│   │   │   │   ├── kitty.nix
+│   │   │   │   ├── starship.nix
+│   │   │   │   └── zsh.nix
+│   │   │   ├── git.nix
+│   │   │   ├── nixvim
+│   │   │   │   ├── colorscheme.nix
+│   │   │   │   ├── default.nix
+│   │   │   │   ├── keymaps.nix
+│   │   │   │   ├── options.nix
+│   │   │   │   ├── plugins
+│   │   │   │   │   ├── init.nix
+│   │   │   │   │   ├── lualine.nix
+│   │   │   │   │   ├── markdown-preview.nix
+│   │   │   │   │   ├── markview.nix
+│   │   │   │   │   ├── neo-tree.nix
+│   │   │   │   │   ├── telescope.nix
+│   │   │   │   │   └── treesitter.nix
+│   │   │   │   └── README.md
+│   │   │   └── nvchad.nix
+│   │   ├── gaming
+│   │   │   ├── default.nix
+│   │   │   └── proton.nix
+│   │   └── programming
+│   │       ├── default.nix
+│   │       ├── editors
+│   │       │   ├── R.nix
+│   │       │   ├── vscode.nix
+│   │       │   └── vscodium.nix
+│   │       └── languages
+│   │           ├── c++.nix
+│   │           ├── example_python_flake.md
+│   │           └── python.nix
+│   └── profiles
+│       ├── leisure.nix
+│       └── uni.nix
 ├── hosts
 │   ├── desktop
 │   │   ├── additional-hardware-config.nix
@@ -107,6 +109,7 @@ sudo nixos-rebuild switch --flake .#laptop
 ├── LICENSE
 ├── README.md
 └── scripts
+    ├── clear.md
     ├── ssh-init.sh
     └── sync_logseq.sh
 ```
