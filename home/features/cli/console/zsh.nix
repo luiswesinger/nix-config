@@ -18,7 +18,7 @@
 
         gpu = "amdgpu_top --gui";
 
-        neofetch = "fastfetch";
+        #neofetch = "fastfetch";
         ff = "fastfetch";
 
         ml = "cd  ~/oth/sem3/machine_learning_project/";

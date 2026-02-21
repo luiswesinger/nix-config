@@ -5,6 +5,7 @@
   imports = [
     # ./geckodriver.nix
     ./zathura.nix
+    ./unixtools.nix
   ];
 
   

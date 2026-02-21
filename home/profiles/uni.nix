@@ -1,11 +1,11 @@
-# home/uni.nix
+# home/profiles/uni.nix
 { pkgs, ... }:
 
 {
   imports = [
-    ./common.nix
+    ../common.nix
 
-    ./programming/editors/vscode.nix
+    ../features/programming/editors/vscodium.nix
   ];
 
 

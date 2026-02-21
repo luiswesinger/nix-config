@@ -9,6 +9,9 @@
 
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
+        # -- LaTeX --
+        james-yu.latex-workshop
+
         # -- Python / Data Science --
         # ms-python.vscode-pylance # Funktioniert oft nicht in Codium (Lizenz-Check)
         ms-python.isort
@@ -30,8 +33,13 @@
       ];
 
       userSettings = {
+       # -- LaTeX Workshop Settings -----------------------
+        "latex-workshop.view.pdf.viewer" = "tab"; 
+        "latex-workshop.latex.autoBuild.run" = "onFileChange"; 
+        "latex-workshop.latex.outDir" = "%DIR%/build"; 
+        "latex-workshop.view.pdf.internal.synctex.keybinding" = "double-click"; 
+
         # -- Editor appearance -----------------------------
-        "workbench.colorTheme" = "Catppuccin Mocha";
         "window.zoomLevel" = 1;
         
         # -- File handling ----------------------------------

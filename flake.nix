@@ -30,6 +30,8 @@
       flake = false;
     };
 
+    stylix.url = "github:danth/stylix";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -57,7 +59,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.luis = import ./home/uni.nix;
+            home-manager.users.luis = import ./home/profiles/uni.nix;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.backupFileExtension = "backup";
           }
@@ -75,7 +77,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.luis = import ./home/leisure.nix;
+            home-manager.users.luis = import ./home/profiles/leisure.nix;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.backupFileExtension = "backup";
           }

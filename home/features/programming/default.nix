@@ -1,4 +1,4 @@
-# home/programming/default.nix
+# home/features/programming/default.nix
 { pkgs, ...}:
 
 { 
@@ -11,6 +11,8 @@
   ];
 
   home.packages = with pkgs; [
+    texlive.combined.scheme-full
+
     ## Monitor GPU ##
     lact # Linux GPU Configuration Tool for AMD and NVIDIA
     amdgpu_top # Tool to display AMDGPU usage
