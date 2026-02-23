@@ -11,6 +11,7 @@
     lutris
     heroic
     bottles
+    prismlauncher
   ];  
 
 }

@@ -3,8 +3,12 @@
 
 {
   imports = [
-    #inputs.nix-colors.homeManagerModules.default
-    ./features/appearance/stylix.nix
+
+    # ---   styling --- #
+    inputs.nix-colors.homeManagerModules.default
+    #./features/appearance/stylix.nix
+    ./features/appearance/gtk.nix
+
     ./features/cli/git.nix
     ./features/cli/nvchad.nix
     #./features/cli/nixvim/default.nix
@@ -14,6 +18,8 @@
     ./features/apps/default.nix
     ./features/programming/default.nix
   ];
+
+  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
   home = {
     username = "luis";
