@@ -33,6 +33,11 @@
       ];
 
       userSettings = {
+       # -- Startup behavior ------------------------------
+        "workbench.welcomePage.tasks.showTips" = false;
+        "workbench.startupEditor" = "none";
+        "workbench.tips.enabled" = false;
+
        # -- LaTeX Workshop Settings -----------------------
         "latex-workshop.view.pdf.viewer" = "tab"; 
         "latex-workshop.latex.autoBuild.run" = "onFileChange"; 
@@ -51,7 +56,7 @@
         "editor.minimap.enable" = true;
         "editor.minimap.showSlider" = "always";
         
-        # -- VSCodium Spezifisches -------------------------
+        # -- VSCodium specific ------------------------------
         "telemetry.telemetryLevel" = "off";
         "extensions.verifySignature" = false; 
       };
