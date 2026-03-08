@@ -5,12 +5,11 @@
   imports = [
     ./hardware-configuration.nix
    
-    ../modules/desktop_environment/kdeplasma6.nix
+    ../../modules/desktop_environment/kdeplasma6.nix
 
-    ../modules/system/base/default.nix
+    ../../modules/system/base/default.nix
 
-    ../modules/system/programming.nix
-    ../modules/system/overlays.nix
+    ../../modules/system/overlays.nix
   ];
 
   networking.hostName = "hp-laptop-luis";
