@@ -10,6 +10,7 @@ in
     ./powermenu.nix
     ./rofi.nix
     ./hyprpaper.nix
+    ./swaylock.nix
   ];
 
   wayland.windowManager.hyprland = {
@@ -74,6 +75,7 @@ in
 
       bind = [
         "$mod, Escape, exec, powermenu"
+        "$mod, L, exec, swaylock"
 
         # start apps
         "$mod, Return, exec, $terminal"

@@ -109,7 +109,7 @@ in
         tooltip = true;
         tooltip-format = "Power menu";
         format = "<span foreground='${custom.red}'> </span>";
-        on-click = "power-menu"; 
+        on-click = "powermenu";
       };
     };
 

@@ -121,13 +121,13 @@ in
     }
   '';
 
-  # powermenue 
+  # powermenu
   xdg.configFile."rofi/powermenu-theme.rasi".text = ''
     @theme "theme"
 
     configuration {
         show-icons: false;
-        font: "Proto Nerd Font Bold 26";
+        font: "Proto Nerd Font Bold 16";
     }
 
     window {

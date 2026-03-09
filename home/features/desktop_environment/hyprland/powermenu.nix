@@ -75,5 +75,6 @@ in
 {
   home.packages = with pkgs; [ 
     powermenu 
+    swaylock-effects
   ];
 }
