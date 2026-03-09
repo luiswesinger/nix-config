@@ -19,6 +19,14 @@
   home = {
     username = "luis";
     homeDirectory = "/home/luis";
+    
+    # default apps
+    sessionVariables = {
+      TERMINAL = "kitty";
+      EDITOR = "nvim";
+      VISUAL = "nvim";
+      BROWSER = "firefox";
+   };
   };
 
   programs.home-manager = {

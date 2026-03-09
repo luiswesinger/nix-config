@@ -4,6 +4,7 @@
 {
   imports = [
     # ./geckodriver.nix
+    ./mime.nix # default apps 
     ./zathura.nix
     ./unixtools.nix
   ];
