@@ -14,11 +14,19 @@
     ./features/programming/default.nix
   ];
 
-  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
+  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha; #gruvbox-dark-medium;
 
   home = {
     username = "luis";
     homeDirectory = "/home/luis";
+    
+    # default apps
+    sessionVariables = {
+      TERMINAL = "kitty";
+      EDITOR = "nvim";
+      VISUAL = "nvim";
+      BROWSER = "firefox";
+   };
   };
 
   programs.home-manager = {

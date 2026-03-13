@@ -72,7 +72,6 @@
     git
     tree
     btop
-    neofetch
     eza
     bat
 

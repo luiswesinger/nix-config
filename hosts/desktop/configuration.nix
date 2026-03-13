@@ -6,15 +6,15 @@
     ./hardware-configuration.nix
     ./additional-hardware-config.nix
    
-    ../modules/desktop_environment/kdeplasma6.nix
+    ../../modules/desktop_environment/kdeplasma6.nix
+    ../../modules/desktop_environment/hyprland.nix
 
-    ../modules/system/base/default.nix
+    ../../modules/system/base/default.nix
 
-    ../modules/system/programming.nix
-    ../modules/system/overlays.nix
+    ../../modules/system/overlays.nix
 
-    ../modules/apps/steam.nix
-    ../modules/apps/flatpak.nix
+    ../../modules/apps/steam.nix
+    ../../modules/apps/flatpak.nix
   ];
 
   networking.hostName = "desktop-luis";

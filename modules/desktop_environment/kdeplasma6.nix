@@ -6,8 +6,8 @@
     xserver = {
       enable = true;
       xkb = {
-	layout = "de";
-	variant = "";
+	      layout = "de";
+      	variant = "";
       };
     };
 
