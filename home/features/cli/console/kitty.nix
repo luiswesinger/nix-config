@@ -11,7 +11,7 @@
     };
 	
     settings = {
-      background_opacity = "0.6";
+      background_opacity = "1";
       dynamic_background_opacity = "yes";
       window_padding_width = 6;
       window_border_width = 1;

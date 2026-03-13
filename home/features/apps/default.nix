@@ -13,5 +13,6 @@
     # chatgpt 
     code-cursor
     p7zip
+    imv
   ];
 }

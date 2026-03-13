@@ -4,8 +4,6 @@
 {
   imports = [
     ../common.nix
-
-    ../features/programming/editors/vscodium.nix
   ];
 
 
@@ -13,6 +11,5 @@
     discord
     openfortivpn
     zoom-us
-    zathura
   ];
 }
