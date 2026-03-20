@@ -22,7 +22,11 @@
         ff = "fastfetch";
 
         y = "yazi";
-        ml = "cd  ~/oth/sem3/machine_learning_project/";
+
+        # directory-shortcuts
+        conf = "cd ~/nix-config/";
+        pg2 = "cd ~/oth/sem2/pg2/";
+
       };
     };
   };

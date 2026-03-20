@@ -4,7 +4,7 @@
 {
   imports = [
     ../common.nix
-    #../features/desktop_environment/hyprland/default.nix
+    ../features/desktop_environment/hyprland/default.nix
     ../features/programming/editors/vscodium.nix
   ];
 

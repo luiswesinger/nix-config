@@ -14,9 +14,9 @@ in
     settings = {
       splash = false;
       
-      preload = [ "~/.config/wallpaper.png" ];
+      preload = [ "${config.home.homeDirectory}/.config/wallpaper.png" ];
       
-      wallpaper = [ ",~/.config/wallpaper.png" ];
+      wallpaper = [ ",${config.home.homeDirectory}/.config/wallpaper.png" ];
     };
   };
 }
