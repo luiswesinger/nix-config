@@ -2,10 +2,11 @@
 { pkgs, ... }: {
 
   home.packages = with pkgs; [
+    gcc
+    libgcc
     gdb
     gnumake
     cmake
-    clang
     eigen # linear algebra algorithms
 
     cppman

@@ -5,6 +5,7 @@
   imports = [
     ./editors/R.nix
     #./editors/vscode.nix
+    ./editors/vscodium.nix
 
     ./languages/c++.nix
     ./languages/python.nix

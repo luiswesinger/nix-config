@@ -5,8 +5,5 @@
   home.packages = with pkgs; [
     pomodoro
     ripgrep
-    gemini-cli
-    chatgpt-cli
-    cursor-cli
   ];
 }

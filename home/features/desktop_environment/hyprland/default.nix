@@ -24,6 +24,10 @@ in
       input = {
           kb_layout = "de";
           kb_options = "ctrl:nocaps";
+          touchpad = {
+            natural_scroll = true;
+            clickfinger_behavior = true;
+          };
       };
 
       monitor = ",preferred,auto,1";
