@@ -11,6 +11,7 @@ in
     ./rofi.nix
     ./hyprpaper.nix
     ./swaylock.nix
+    ./keybinds.nix
   ];
 
   wayland.windowManager.hyprland = {
@@ -29,7 +30,6 @@ in
 
       "$terminal" = "kitty";
       "$fileManager" = "kitty -e yazi";
-      "$mod" = "SUPER"; 
       "$menu" = "rofi -show drun";
 
       exec-once = [
@@ -73,42 +73,18 @@ in
         ];
       };
 
-      bind = [
-        "$mod, Escape, exec, powermenu"
-        "$mod, L, exec, swaylock"
-
-        # start apps
-        "$mod, Return, exec, $terminal"
-        "$mod, E, exec, $fileManager"
-        "$mod, SPACE, exec, $menu"
-        
-        # manage windows 
-        "$mod, Q, killactive,"
-        "$mod SHIFT, M, exit," 
-        "$mod, F, togglefloating,"
-        "$mod, J, togglesplit," 
-
-        # change focus (vim-style)
-        "$mod, left, movefocus, l"
-        "$mod, right, movefocus, r"
-        "$mod, up, movefocus, u"
-        "$mod, down, movefocus, d"
-      ] ++ (
-        # bind 9 workspaces
-        builtins.concatLists (builtins.genList (i:
-            let ws = i + 1;
-            in [
-              "$mod, ${toString ws}, workspace, ${toString ws}"
-              "$mod SHIFT, ${toString ws}, movetoworkspace, ${toString ws}"
-            ]
-          ) 9)
-      );
-
-      # mouse interactions
-      bindm = [
-        "$mod, mouse:272, movewindow"
-        "$mod, mouse:273, resizewindow"
-      ];
+      dwindle = {
+        pseudotile = true;
+        preserve_split = true; 
+        force_split = 2;
+      };
     };
   };
+
+  home.packages = with pkgs; [
+    pavucontrol
+    pamixer
+    bluez
+    bluez-tools
+  ];
 }
