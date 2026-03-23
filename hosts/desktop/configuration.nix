@@ -7,7 +7,7 @@
     ./additional-hardware-config.nix
    
     ../../modules/desktop_environment/kdeplasma6.nix
-    ../../modules/desktop_environment/hyprland.nix
+    #../../modules/desktop_environment/hyprland.nix
 
     ../../modules/system/base/default.nix
 
