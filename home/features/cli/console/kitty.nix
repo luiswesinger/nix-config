@@ -20,12 +20,12 @@
       "ctrl+shift+,"     = "set_tab_title";
 
       # Splits (kitty windows)
-      "ctrl+shift+h"     = "launch --location=horizontal --cwd=current";
-      "ctrl+shift+v"     = "launch --location=vertical --cwd=current";
-      "ctrl+shift+l"     = "neighboring_window left";
-      "ctrl+shift+r"     = "neighboring_window right";
-      "ctrl+shift+u"     = "neighboring_window up";
-      "ctrl+shift+d"     = "neighboring_window down";
+      "ctrl+shift+d"     = "launch --location=hsplit --cwd=current";
+      "ctrl+shift+minus"     = "launch --location=vsplit --cwd=current";
+      "ctrl+shift+h"     = "neighboring_window left";
+      "ctrl+shift+l"     = "neighboring_window right";
+      "ctrl+shift+k"     = "neighboring_window up";
+      "ctrl+shift+j"     = "neighboring_window down";
 
       # Quick editor in current dir
       "f2"               = "launch --cwd=current $EDITOR .";
@@ -38,6 +38,7 @@
       background_blur            = 20;
 
       # ── Layout / spacing ────────────────────────────────────────────────
+      enabled_layouts       = "splits";
       window_padding_width  = "12 16";   # vertical horizontal — generous breathing room
       window_border_width   = "1.5";
       window_margin_width   = 0;
