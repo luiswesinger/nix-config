@@ -64,6 +64,7 @@
             home-manager.users.luis = import ./home/profiles/uni.nix;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.backupFileExtension = "backup";
+            home-manager.backupCommand = "rm -f $HOME/.config/mimeapps.list.backup $HOME/.gtkrc-2.0.backup";
           }
           ./hosts/laptop/configuration.nix
         ];
@@ -82,6 +83,7 @@
             home-manager.users.luis = import ./home/profiles/leisure.nix;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.backupFileExtension = "backup";
+            home-manager.backupCommand = "rm -f $HOME/.config/mimeapps.list.backup $HOME/.gtkrc-2.0.backup";
           }
           ./hosts/desktop/configuration.nix
         ];
