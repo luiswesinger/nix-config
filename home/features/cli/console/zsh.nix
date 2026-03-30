@@ -15,7 +15,6 @@
         y = "yazi";
 
         # Safety
-        rm = "rm -i";
         cp = "cp -i";
         mv = "mv -i";
 
@@ -25,8 +24,8 @@
         _ = "sudo";
 
         # NixOS Management
-        lap = "sudo nixos-rebuild switch --flake .#laptop";
-        desk = "sudo nixos-rebuild switch --flake .#desktop";
+        lap = "rm ~/.gtkrc-2.0.backup && sudo nixos-rebuild switch --flake .#laptop";
+        desk = "rm ~/.gtkrc-2.0.backup && sudo nixos-rebuild switch --flake .#desktop";
         ns = "nix-shell";
         nd = "nix develop";
         nb = "nix build";
