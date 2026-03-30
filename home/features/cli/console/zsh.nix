@@ -20,7 +20,6 @@
         mv = "mv -i";
 
         # Modern Replacements
-        cat = "bat";
         grep = "rg";
         top = "btop";
         _ = "sudo";
