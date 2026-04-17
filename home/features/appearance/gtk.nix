@@ -1,5 +1,5 @@
 # home/appearance/gtk.nix
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 let
   flatery-icon-theme = pkgs.stdenv.mkDerivation {
@@ -31,6 +31,8 @@ in
       name = "Dracula";
       package = pkgs.dracula-theme;
     };
+
+    gtk4.theme = config.gtk.theme;
 
     cursorTheme = {
       name = "Catppuccin-Mocha-Dark-Cursors";
