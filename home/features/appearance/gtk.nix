@@ -47,7 +47,8 @@ in
       #package = flatery-icon-theme;
     };
 
-    font.name = "0xProto Nerd Font Regular 11";
+    font.name = "Roboto Mono 12";
+    #font.name = "0xProto Nerd Font Regular 12";
   };
 
   fonts.fontconfig.enable = true;
@@ -58,5 +59,6 @@ in
     dracula-theme
     catppuccin-cursors
     pkgs.nerd-fonts._0xproto
+    pkgs.nerd-fonts.roboto-mono
  ];
 }

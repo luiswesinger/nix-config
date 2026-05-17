@@ -6,8 +6,7 @@
 
     # ---   styling --- #
     inputs.nix-colors.homeManagerModules.default
-    #./features/appearance/stylix.nix
-    ./features/appearance/gtk.nix
+    ./features/appearance/default.nix
 
     ./features/cli/default.nix
     ./features/apps/default.nix

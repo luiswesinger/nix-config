@@ -12,6 +12,7 @@
   
   home.packages = with pkgs; [
     # chatgpt 
+    discord
     code-cursor
     p7zip
     imv
