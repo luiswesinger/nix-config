@@ -12,7 +12,7 @@
   ];
 
   home.packages = with pkgs; [
-    texlive.combined.scheme-full
+    texliveBasic
 
     ## Monitor GPU ##
     lact # Linux GPU Configuration Tool for AMD and NVIDIA
