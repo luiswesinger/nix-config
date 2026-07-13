@@ -3,7 +3,7 @@
 
 { 
   imports = [
-    ./editors/R.nix
+    # ./editors/R.nix
     #./editors/vscode.nix
     ./editors/vscodium.nix
 

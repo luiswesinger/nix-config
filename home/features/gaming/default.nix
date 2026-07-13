@@ -10,7 +10,7 @@
     mangohud
     lutris
     heroic
-    bottles
+    # bottles # has errors with python dependencies, so commented out for now
     prismlauncher
   ];  
 
