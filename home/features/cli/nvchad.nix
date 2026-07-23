@@ -30,7 +30,7 @@
           ft = { "markdown" },
           config = function()
             vim.g.mkdp_auto_start = 0
-            vim.g.mkdp_browser = "firefox" -- or "chromium"
+            vim.g.mkdp_browser = "brave" -- or "chromium"
           end,
         },
 

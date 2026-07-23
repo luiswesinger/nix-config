@@ -11,6 +11,8 @@
     ./features/cli/default.nix
     ./features/apps/default.nix
     ./features/programming/default.nix
+
+    ./features/ai/default.nix
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha; #gruvbox-dark-medium;
@@ -24,7 +26,7 @@
       TERMINAL = "kitty";
       EDITOR = "nvim";
       VISUAL = "nvim";
-      BROWSER = "firefox";
+      BROWSER = "brave";
    };
   };
 

@@ -11,7 +11,7 @@
       refresh_slow = 0; # faster actualisation
       command_for_global = 0;
       open_to_the_world = 0; # no remote access
-      browser = "firefox"; 
+      browser = "brave"; 
     };
   }; 
 
