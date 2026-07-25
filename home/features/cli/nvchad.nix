@@ -78,6 +78,25 @@
           print("Not a PDF file.")
         end
       end, { desc = "PDF Open current PDF in Zathura" })
+
+      -- Kitty terminal shortcuts documentation for NvChad Cheatsheet
+      local kitty_maps = {
+        ["ctrl+shift+t"]     = "New tab (cwd)",
+        ["ctrl+shift+w"]     = "Close tab",
+        ["ctrl+shift+right"] = "Next tab",
+        ["ctrl+shift+left"]  = "Previous tab",
+        ["ctrl+shift+,"]     = "Set tab title",
+        ["ctrl+shift+d"]     = "Split horizontal",
+        ["ctrl+shift+-"]     = "Split vertical",
+        ["ctrl+shift+h"]     = "Focus left window",
+        ["ctrl+shift+l"]     = "Focus right window",
+        ["ctrl+shift+k"]     = "Focus up window",
+        ["ctrl+shift+j"]     = "Focus down window",
+        ["f2"]               = "Quick editor in cwd",
+      }
+      for k, v in pairs(kitty_maps) do
+        vim.keymap.set("n", k, "<nop>", { desc = "Kitty " .. v })
+      end
     '';
 
   };
