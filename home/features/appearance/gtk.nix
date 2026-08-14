@@ -1,4 +1,4 @@
-# home/appearance/gtk.nix
+# home/features/appearance/gtk.nix
 { pkgs, config, ... }:
 
 let
@@ -22,6 +22,23 @@ let
       cp -r Flatery* $out/share/icons/
     '';
   };
+
+  dracula-gtk-theme = pkgs.stdenv.mkDerivation {
+    pname = "dracula-gtk-theme";
+    version = "unstable";
+    src = pkgs.fetchFromGitHub {
+      owner = "dracula";
+      repo = "gtk";
+      rev = "master";
+      sha256 = "sha256-5v7hWqG/XvFpYm3q7Y3vO/qB9I/3h8j6c3J0Z7Z7Z7Z=";
+    };
+
+    dontBuild = true;
+    installPhase = ''
+      mkdir -p $out/share/themes/Dracula
+      cp -r * $out/share/themes/Dracula/
+    '';
+  };
 in
 {
   gtk = {
@@ -29,7 +46,7 @@ in
 
     theme = {
       name = "Dracula";
-      package = pkgs.dracula-theme;
+      package = dracula-gtk-theme;
     };
 
     gtk4.theme = config.gtk.theme;
@@ -56,7 +73,7 @@ in
   home.packages = with pkgs; [
     flatery-icon-theme
     dracula-icon-theme
-    dracula-theme
+    dracula-gtk-theme
     catppuccin-cursors
     pkgs.nerd-fonts._0xproto
     pkgs.nerd-fonts.roboto-mono
