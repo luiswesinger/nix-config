@@ -30,7 +30,7 @@ let
       owner = "dracula";
       repo = "gtk";
       rev = "master";
-      sha256 = "sha256-5v7hWqG/XvFpYm3q7Y3vO/qB9I/3h8j6c3J0Z7Z7Z7Z=";
+      sha256 = "sha256-95Lfr4yiu7Yyff/pVgLCyKRX/btjdTASIqJ785XePG0=";
     };
 
     dontBuild = true;

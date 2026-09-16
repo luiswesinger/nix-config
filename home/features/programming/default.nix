@@ -7,6 +7,8 @@
     #./editors/vscode.nix
     ./editors/vscodium.nix
 
+    ./tools/docker.nix
+
     ./languages/c++.nix
     ./languages/python.nix
   ];
