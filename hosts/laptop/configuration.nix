@@ -9,7 +9,7 @@
     #../../modules/desktop_environment/hyprland.nix
     
     ../../modules/system/base/default.nix
-    ../../modules/system/services/default.nix
+    ../../modules/system/services/laptop_default.nix
 
     ../../modules/system/overlays.nix
   ];
