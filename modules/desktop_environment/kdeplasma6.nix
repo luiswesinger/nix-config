@@ -23,4 +23,11 @@
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     plasma-browser-integration
   ];
+
+  environment.systemPackages = [
+    (pkgs.writeTextDir "share/sddm/themes/breeze/theme.conf.user" ''
+      [General]
+      background=${../../.assets/wallpapers/nix.png}
+    '')
+  ];
 }

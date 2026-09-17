@@ -8,8 +8,8 @@
     ../../modules/desktop_environment/kdeplasma6.nix
     #../../modules/desktop_environment/hyprland.nix
     
-    ../../modules/system/base/
-    ../../modules/system/services/
+    ../../modules/system/base
+    ../../modules/system/services
 
     ../../modules/system/overlays.nix
   ];

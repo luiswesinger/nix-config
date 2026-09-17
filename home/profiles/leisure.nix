@@ -5,6 +5,6 @@
   imports = [
     ../common.nix
     #../features/desktop_environment/hyprland/default.nix
-    ../features/gaming/
+    ../features/gaming
   ];
 }

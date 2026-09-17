@@ -6,13 +6,11 @@
 
     # ---   styling --- #
     inputs.nix-colors.homeManagerModules.default
-    ./features/appearance/
-
-    ./features/cli/
-    ./features/apps/
-    ./features/programming/
-
-    ./features/ai/
+    ./features/appearance
+    ./features/cli
+    ./features/apps
+    ./features/programming
+    ./features/ai
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha; #gruvbox-dark-medium;
