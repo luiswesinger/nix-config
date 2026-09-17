@@ -16,5 +16,8 @@
     code-cursor
     p7zip
     imv
+    
+    # signal-desktop
+    # obs-studio
   ];
 }

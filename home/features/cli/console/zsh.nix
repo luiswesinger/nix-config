@@ -58,7 +58,6 @@
 
         # Directory-Shortcuts
         conf = "cd ~/nix-config/";
-        pg2 = "cd ~/oth/sem2/pg2/";
       };
     };
   };

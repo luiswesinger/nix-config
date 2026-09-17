@@ -39,10 +39,7 @@
     logseq
     openvpn
     gimp
-    obs-studio
-    signal-desktop
     brave
-    chromium
   ];
 
   home.stateVersion = "25.05";
