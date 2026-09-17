@@ -9,14 +9,20 @@
     ../../modules/desktop_environment/kdeplasma6.nix
     #../../modules/desktop_environment/hyprland.nix
 
-    ../../modules/system/base/default.nix
-    ../../modules/system/services/desktop_default.nix
+    ../../modules/system/base/
+    ../../modules/system/services/
 
     ../../modules/system/overlays.nix
 
     ../../modules/apps/steam.nix
     ../../modules/apps/flatpak.nix
   ];
+
+  # background services
+  modules.services = {
+    docker.enable = false;
+    tailscale.enable = true;
+  };
 
   networking.hostName = "desktop-luis";
 

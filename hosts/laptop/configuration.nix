@@ -8,11 +8,17 @@
     ../../modules/desktop_environment/kdeplasma6.nix
     #../../modules/desktop_environment/hyprland.nix
     
-    ../../modules/system/base/default.nix
-    ../../modules/system/services/laptop_default.nix
+    ../../modules/system/base/
+    ../../modules/system/services/
 
     ../../modules/system/overlays.nix
   ];
+
+  # background services
+  modules.services = {
+    docker.enable = true;
+    tailscale.enable = false;
+  };
 
   networking.hostName = "hp-laptop-luis";
 

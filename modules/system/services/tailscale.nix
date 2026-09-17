@@ -1,7 +1,10 @@
 # modules/system/services/tailscale.nix
-{ pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
-  # Tailscale for remote work
-  services.tailscale.enable = true; 
+  options.modules.services.tailscale.enable = lib.mkEnableOption "Tailscale service";
+
+  config = lib.mkIf config.modules.services.tailscale.enable {
+    services.tailscale.enable = true;
+  };
 }
