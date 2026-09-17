@@ -52,6 +52,6 @@ home/
 ## Global Applications (`common.nix`)
 
 Every user profile automatically inherits a curated suite of daily productivity tools:
-- **Media & Communication:** `spotify`, `signal-desktop`, `obs-studio`, `gimp`
-- **Browsers:** `brave`, `chromium`
+- **Media & Creativity:** `spotify`, `gimp`
+- **Browsers:** `brave`
 - **Knowledge & Networking:** `logseq`, `openvpn`

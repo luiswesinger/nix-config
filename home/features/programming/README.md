@@ -10,7 +10,7 @@
 
 ## Overview
 
-This directory provides developer toolchains and code editor configurations. It separates IDE & editor settings (`editors/`) from compiler toolchains and language environment specs (`languages/`).
+This directory provides developer toolchains, containerization utilities, and code editor configurations. It separates IDE & editor settings (`editors/`), container and DevOps tooling (`tools/`), and compiler toolchains with language environment specs (`languages/`).
 
 ---
 
@@ -25,6 +25,9 @@ This directory provides developer toolchains and code editor configurations. It 
 - **C++ ([`c++.nix`](file:///home/luis/nix-config/home/features/programming/languages/c++.nix)):** GCC/Clang compilers, `gdb` debugger, `cmake`, `ninja`, `bear` compilation database tool.
 - **Reproducible Python Environments ([`example_python_flake.md`](file:///home/luis/nix-config/home/features/programming/languages/example_python_flake.md)):** Reference guide for per-project Nix devShell flakes.
 
+### 3. Container & DevOps Tooling (`tools/`)
+- **Docker & Container Utilities ([`docker.nix`](file:///home/luis/nix-config/home/features/programming/tools/docker.nix)):** Client tools including `docker`, `docker-compose`, `docker-buildx`, and `lazydocker` (terminal UI dashboard for Docker containers). *(System daemon activation is managed via `modules.services.docker.enable` at the host level).*
+
 ---
 
 ## Directory Structure
@@ -36,8 +39,10 @@ home/features/programming/
 │   ├── R.nix
 │   ├── vscode.nix
 │   └── vscodium.nix
-└── languages/        # Language toolchains & developer guides
-    ├── c++.nix
-    ├── example_python_flake.md
-    └── python.nix
+├── languages/        # Language toolchains & developer guides
+│   ├── c++.nix
+│   ├── example_python_flake.md
+│   └── python.nix
+└── tools/            # Container and development tooling
+    └── docker.nix
 ```

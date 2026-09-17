@@ -16,10 +16,10 @@ This directory contains the system-level NixOS configurations for each physical 
 
 ## Host Configurations
 
-| Hostname | Type | Config Path | Home-Manager Profile | Desktop Environment | Features |
+| Hostname | Type | Config Path | Home-Manager Profile | Desktop Environment | Features & Services |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **`laptop`** | Laptop (`hp-laptop-luis`) | [`hosts/laptop`](file:///home/luis/nix-config/hosts/laptop) | [`uni.nix`](file:///home/luis/nix-config/home/profiles/uni.nix) | KDE Plasma 6 | Swapfile (4 GiB), Graphics 32-bit support, VPN & Uni tools |
-| **`desktop`** | Desktop (`desktop-luis`) | [`hosts/desktop`](file:///home/luis/nix-config/hosts/desktop) | [`leisure.nix`](file:///home/luis/nix-config/home/profiles/leisure.nix) | KDE Plasma 6 | Steam, Flatpak, Additional Storage Drives |
+| **`laptop`** | Laptop (`hp-laptop-luis`) | [`hosts/laptop`](file:///home/luis/nix-config/hosts/laptop) | [`uni.nix`](file:///home/luis/nix-config/home/profiles/uni.nix) | KDE Plasma 6 | Swapfile (4 GiB), Graphics 32-bit support, VPN & Uni tools, Docker enabled |
+| **`desktop`** | Desktop (`desktop-luis`) | [`hosts/desktop`](file:///home/luis/nix-config/hosts/desktop) | [`leisure.nix`](file:///home/luis/nix-config/home/profiles/leisure.nix) | KDE Plasma 6 | Steam, Flatpak, Additional Storage Drives, Tailscale enabled |
 
 ---
 
@@ -56,6 +56,10 @@ sudo nixos-rebuild switch --flake .#laptop
 
 ## Configuration Details
 
-- **User Setup:** Defines user `luis` as a primary user with `zsh` as default shell and `wheel` / `networkmanager` group privileges.
+- **User Setup:** Defines user `luis` as a primary user with `zsh` as default shell and `wheel` / `networkmanager` group privileges (and `docker` group when Docker service is enabled).
+- **Modular Background Services (`modules.services`):**
+  - `docker.enable`: Controls the Docker daemon and grants user group permissions (enabled on `laptop`, disabled on `desktop`).
+  - `tailscale.enable`: Controls the Tailscale mesh VPN daemon (enabled on `desktop`, disabled on `laptop`).
+  - `openssh.enable`: Hardened SSH daemon (enabled by default across all hosts).
 - **Memory Cushioning:** Configures an automatic `/swapfile` (4 GiB) for smooth memory handling under heavy workloads.
-- **Shared Base Modules:** Both hosts import system-wide baseline settings from [`../modules/system/base`](file:///home/luis/nix-config/modules/system/base) and custom package overlays from [`../modules/system/overlays.nix`](file:///home/luis/nix-config/modules/system/overlays.nix).
+- **Shared Base Modules:** Both hosts import system-wide baseline settings from [`../modules/system/base`](file:///home/luis/nix-config/modules/system/base), background services from [`../modules/system/services`](file:///home/luis/nix-config/modules/system/services), and custom package overlays from [`../modules/system/overlays.nix`](file:///home/luis/nix-config/modules/system/overlays.nix).
