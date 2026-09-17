@@ -7,7 +7,7 @@
     claude-code
     #mistral-vibe
     #chatgpt-cli
-    antigravity-cli
+    antigravity-cli # enter with "agy"
 
     herdr   # tool for managing agents in cli
   ];
