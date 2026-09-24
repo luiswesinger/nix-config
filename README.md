@@ -42,6 +42,7 @@ Detailed documentation is available across the repository's modules:
 | ├── **[`programming/`](file:///home/luis/nix-config/home/features/programming/README.md)** | Code editors (VS Code / VSCodium), language runtimes (Python, C++), and Docker tools. |
 | └── **[`desktop_environment/hyprland/`](file:///home/luis/nix-config/home/features/desktop_environment/hyprland/README.md)** | Custom Hyprland Wayland compositor setup with Waybar, Rofi, and Swaylock. |
 | **[`scripts/`](file:///home/luis/nix-config/scripts/README.md)** | Standalone automation scripts (Debian/Mint terminal installer, SSH initialization, Logseq sync). |
+| **[`AGENTS.md`](file:///home/luis/nix-config/AGENTS.md)** | Directives and behavioral guidelines for AI pair programmers and agentic coding workflows. |
 
 ---
 
