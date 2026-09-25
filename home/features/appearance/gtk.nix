@@ -46,7 +46,7 @@ in
 
     theme = {
       name = "Dracula";
-      package = dracula-gtk-theme;
+      package = pkgs.dracula-theme;
     };
 
     gtk4.theme = config.gtk.theme;
@@ -73,7 +73,7 @@ in
   home.packages = with pkgs; [
     flatery-icon-theme
     dracula-icon-theme
-    dracula-gtk-theme
+    dracula-theme
     catppuccin-cursors
     pkgs.nerd-fonts._0xproto
     pkgs.nerd-fonts.roboto-mono
