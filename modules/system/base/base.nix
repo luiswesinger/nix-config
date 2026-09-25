@@ -61,6 +61,14 @@
       experimental-features = ["nix-command" "flakes"];
       # Workaround for https://github.com/NixOS/nix/issues/9574
       nix-path = config.nix.nixPath;
+      # save space by ignoring updates, which dindt change anything
+      auto-optimise-store = true;
+    };
+    
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-thank 7d";
     };
   };
 
