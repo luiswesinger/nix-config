@@ -24,8 +24,10 @@
         _ = "sudo";
 
         # NixOS Management
+        check = "nix flake check";
         lap = "sudo nixos-rebuild switch --flake .#laptop";
         desk = "sudo nixos-rebuild switch --flake .#desktop";
+        min = "sudo nixos-rebuild switch --flake .#minimal";
         ns = "nix-shell";
         nd = "nix develop";
         nb = "nix build";

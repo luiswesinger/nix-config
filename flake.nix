@@ -52,6 +52,27 @@
     nixosConfigurations = {
 
       # --------------------------------------------
+      #    Minimal-Setup
+      # --------------------------------------------
+
+      minimal = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.luis = import ./home/profiles/minimal.nix;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.backupFileExtension = "backup";
+            home-manager.backupCommand = "rm -f $HOME/.config/mimeapps.list.backup $HOME/.gtkrc-2.0.backup";
+          
+          }
+          ./hosts/minimal/configuration.nix
+        ];
+      };
+
+      # --------------------------------------------
       #    Laptop-Setup
       # --------------------------------------------
       laptop = nixpkgs.lib.nixosSystem {

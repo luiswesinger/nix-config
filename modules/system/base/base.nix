@@ -76,7 +76,7 @@
   environment.systemPackages = with pkgs; [
     home-manager
     kitty
-    firefox
+    # firefox
     git
     tree
     btop
