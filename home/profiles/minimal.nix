@@ -20,7 +20,7 @@
       TERMINAL = "kitty";
       EDITOR = "nvim";
       VISUAL = "nvim";
-      BRWOSER = "brave";
+      BROWSER = "brave";
     };
   };
 

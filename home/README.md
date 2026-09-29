@@ -33,6 +33,7 @@ Profiles combine baseline user settings with workload-specific applications and 
 | :--- | :--- | :--- | :--- |
 | **`uni.nix`** | University & Work profile | [`common.nix`](file:///home/luis/nix-config/home/common.nix), VSCodium, OpenFortiVPN, Zoom | Laptop |
 | **`leisure.nix`** | Gaming & Personal profile | [`common.nix`](file:///home/luis/nix-config/home/common.nix), Steam & Gaming tooling | Desktop |
+| **`minimal.nix`** | Minimal lightweight profile | CLI suite, Appearance/GTK, Unix tools, Brave | Minimal |
 
 ---
 
@@ -40,10 +41,11 @@ Profiles combine baseline user settings with workload-specific applications and 
 
 ```
 home/
-├── common.nix         # Base Home-Manager settings shared across all profiles
+├── common.nix         # Base Home-Manager settings shared across standard profiles
 ├── features/          # Modular feature definitions (CLI, AI, Apps, Programming, etc.)
 └── profiles/
     ├── leisure.nix    # Gaming and leisure user environment profile
+    ├── minimal.nix    # Minimal and lightweight user environment profile
     └── uni.nix        # University and work environment profile
 ```
 
@@ -51,7 +53,10 @@ home/
 
 ## Global Applications (`common.nix`)
 
-Every user profile automatically inherits a curated suite of daily productivity tools:
+Standard user profiles (`uni.nix`, `leisure.nix`) inherit `common.nix` with a curated suite of daily productivity tools:
 - **Media & Creativity:** `spotify`, `gimp`
 - **Browsers:** `brave`
 - **Knowledge & Networking:** `logseq`, `openvpn`
+
+> [!NOTE]
+> `minimal.nix` intentionally avoids importing `common.nix` to keep dependencies lean, directly importing only `features/appearance`, `features/cli`, `features/apps/unixtools.nix`, and `brave`.

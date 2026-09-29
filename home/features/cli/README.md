@@ -33,6 +33,10 @@ The `cli` directory configures the command-line workspace. It integrates modern 
   - `top` → `btop`
   - `y` → `yazi`
   - `ff` → `fastfetch`
+- **NixOS Management Shortcuts:**
+  - `lap` / `desk` / `min`: Rebuild switch shortcuts for target configurations (`laptop`, `desktop`, `minimal`)
+  - `check`: Run `nix flake check`
+  - `ns` / `nd` / `nb`: Shortcuts for `nix-shell`, `nix develop`, `nix build`
 - **Fastfetch:** Includes custom Gengar ASCII logo art (`console/fastfetch_logo/gengar.txt`).
 
 ### 3. Neovim Setups

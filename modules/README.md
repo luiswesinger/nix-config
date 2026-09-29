@@ -29,7 +29,7 @@ Declarative, toggleable background service modules controlled via the `modules.s
 
 ### 3. Desktop Environment Modules (`desktop_environment/`)
 Provides selectable desktop environment options:
-- [`kdeplasma6.nix`](file:///home/luis/nix-config/modules/desktop_environment/kdeplasma6.nix): KDE Plasma 6 desktop suite & SDDM display manager (Active on `laptop` and `desktop`).
+- [`kdeplasma6.nix`](file:///home/luis/nix-config/modules/desktop_environment/kdeplasma6.nix): KDE Plasma 6 desktop suite & SDDM display manager (Active on `laptop`, `desktop`, and `minimal`).
 - [`hyprland.nix`](file:///home/luis/nix-config/modules/desktop_environment/hyprland.nix): System-level Hyprland compositor enablement & pam authentication options for Swaylock.
 - [`gnome.nix`](file:///home/luis/nix-config/modules/desktop_environment/gnome.nix) & [`budgie.nix`](file:///home/luis/nix-config/modules/desktop_environment/budgie.nix): Alternative DE options.
 

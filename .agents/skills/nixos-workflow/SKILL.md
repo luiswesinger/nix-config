@@ -37,6 +37,9 @@ nixos-rebuild build --flake .#laptop
 
 # For desktop:
 nixos-rebuild build --flake .#desktop
+
+# For minimal:
+nixos-rebuild build --flake .#minimal
 ```
 
 ### 5. Format & Clean

@@ -14,7 +14,7 @@ Welcome to @luiswesinger's NixOS configuration repository. This system is writte
    - **`modules/`**: System-level NixOS modules (NixOS options in `modules.services.<name>.enable` or desktop environments).
    - **`home/`**: Home-Manager user space.
      - `home/common.nix`: Common packages and styling inherited by all profiles.
-     - `home/profiles/<profile>.nix`: Host-specific role configuration (e.g. `uni.nix` for laptop, `leisure.nix` for desktop).
+     - `home/profiles/<profile>.nix`: Host-specific role configuration (e.g. `uni.nix` for laptop, `leisure.nix` for desktop, `minimal.nix` for minimal).
      - `home/features/<feature>/`: Granular feature blocks (cli, programming, ai, apps, gaming, appearance).
    - Always match existing naming conventions (e.g. `default.nix` loaders, clear comments with file path at top).
 
@@ -30,7 +30,7 @@ Welcome to @luiswesinger's NixOS configuration repository. This system is writte
      ```
    - Test build the target host without activating it:
      ```bash
-     nixos-rebuild build --flake .#<laptop|desktop>
+     nixos-rebuild build --flake .#<laptop|desktop|minimal>
      ```
    - Only propose switching after a clean build has succeeded.
 

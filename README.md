@@ -24,6 +24,9 @@ sudo nixos-rebuild switch --flake .#laptop
 
 # Desktop deployment (profile: leisure)
 sudo nixos-rebuild switch --flake .#desktop
+
+# Minimal deployment (profile: minimal)
+sudo nixos-rebuild switch --flake .#minimal
 ```
 
 ---
@@ -34,9 +37,9 @@ Detailed documentation is available across the repository's modules:
 
 | Section | Description |
 | :--- | :--- |
-| **[`hosts/`](file:///home/luis/nix-config/hosts/README.md)** | Machine configurations (`desktop`, `laptop`), hardware specs, and service toggles. |
+| **[`hosts/`](file:///home/luis/nix-config/hosts/README.md)** | Machine configurations (`desktop`, `laptop`, `minimal`), hardware specs, and service toggles. |
 | **[`modules/`](file:///home/luis/nix-config/modules/README.md)** | System modules: baseline OS settings, background services (`docker`, `openssh`, `tailscale`), desktop environments, and apps. |
-| **[`home/`](file:///home/luis/nix-config/home/README.md)** | User environments via Home-Manager, profile definitions (`uni.nix`, `leisure.nix`), and global applications. |
+| **[`home/`](file:///home/luis/nix-config/home/README.md)** | User environments via Home-Manager, profile definitions (`uni.nix`, `leisure.nix`, `minimal.nix`), and global applications. |
 | **[`home/features/`](file:///home/luis/nix-config/home/features/README.md)** | Modular user feature suites (AI, CLI, Appearance, Apps, Gaming, Programming). |
 | ├── **[`cli/`](file:///home/luis/nix-config/home/features/cli/README.md)** | Shell (`zsh` + `starship`), Kitty terminal, and Neovim environments ([`NvChad`](file:///home/luis/nix-config/home/features/cli/nvchad.nix) & [`NixVim`](file:///home/luis/nix-config/home/features/cli/nixvim/README.md)). |
 | ├── **[`programming/`](file:///home/luis/nix-config/home/features/programming/README.md)** | Code editors (VS Code / VSCodium), language runtimes (Python, C++), and Docker tools. |
