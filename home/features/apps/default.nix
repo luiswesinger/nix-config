@@ -11,13 +11,12 @@
 
   
   home.packages = with pkgs; [
-    # chatgpt 
     discord
-    code-cursor
     p7zip
     imv
     
-    # signal-desktop
+    firefox
+
     # obs-studio
   ];
 }
