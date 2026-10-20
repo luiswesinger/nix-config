@@ -24,6 +24,7 @@ The `modules` directory contains reusable system-level NixOS modules imported by
 Declarative, toggleable background service modules controlled via the `modules.services` namespace:
 - [`default.nix`](file:///home/luis/nix-config/modules/system/services/default.nix): Service loader importing all service modules.
 - [`docker.nix`](file:///home/luis/nix-config/modules/system/services/docker.nix): `modules.services.docker.enable` – Enables the Docker daemon and automatically adds user `luis` to the `docker` group.
+- [`ollama.nix`](file:///home/luis/nix-config/modules/system/services/ollama.nix): `modules.services.ollama.enable` – Enables the Ollama daemon for local LLM inference.
 - [`openssh.nix`](file:///home/luis/nix-config/modules/system/services/openssh.nix): `modules.services.openssh.enable` (defaults to `true`) – Configures OpenSSH daemon with hardened defaults (`PermitRootLogin = "no"`, `PasswordAuthentication = true`, firewall opened).
 - [`tailscale.nix`](file:///home/luis/nix-config/modules/system/services/tailscale.nix): `modules.services.tailscale.enable` – Enables the Tailscale mesh VPN daemon.
 
@@ -63,6 +64,7 @@ modules/
     └── services/
         ├── default.nix   # Aggregator for service modules
         ├── docker.nix    # Docker daemon & user group configuration
+        ├── ollama.nix    # Ollama local LLM service
         ├── openssh.nix   # Hardened OpenSSH daemon service
         └── tailscale.nix # Tailscale VPN service
 ```

@@ -18,6 +18,7 @@
   modules.services = {
     docker.enable = true;
     tailscale.enable = false;
+    ollama.enable = true;
   };
 
   networking.hostName = "hp-laptop-luis";
