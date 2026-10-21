@@ -2,6 +2,7 @@
 {
   imports = [
     ./git.nix
+    ./direnv.nix
     ./nvchad.nix
     ./btop.nix
     ./cli_tools.nix

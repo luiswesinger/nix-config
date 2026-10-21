@@ -61,6 +61,7 @@ home/features/cli/
 ├── btop.nix          # System resource monitor configuration
 ├── cli_tools.nix     # Core CLI packages (eza, bat, ripgrep, etc.)
 ├── default.nix       # Main CLI module loader
+├── direnv.nix        # Per-directory environment switcher with nix-direnv caching
 ├── git.nix           # Git version control options & aliases
 ├── nvchad.nix        # NvChad configuration with custom Lua plugins & Kitty cheatsheet
 ├── yazi.nix          # Blazing-fast terminal file manager
