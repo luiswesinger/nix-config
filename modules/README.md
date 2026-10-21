@@ -27,6 +27,7 @@ Declarative, toggleable background service modules controlled via the `modules.s
 - [`ollama.nix`](file:///home/luis/nix-config/modules/system/services/ollama.nix): `modules.services.ollama.enable` – Enables the Ollama daemon for local LLM inference.
 - [`openssh.nix`](file:///home/luis/nix-config/modules/system/services/openssh.nix): `modules.services.openssh.enable` (defaults to `true`) – Configures OpenSSH daemon with hardened defaults (`PermitRootLogin = "no"`, `PasswordAuthentication = true`, firewall opened).
 - [`tailscale.nix`](file:///home/luis/nix-config/modules/system/services/tailscale.nix): `modules.services.tailscale.enable` – Enables the Tailscale mesh VPN daemon.
+- [`virtualisation.nix`](file:///home/luis/nix-config/modules/system/services/virtualisation.nix): `modules.services.virtualisation.enable` – Full virtualization suite (KVM, QEMU, Virt-Manager, OVMF UEFI, TPM, and VirtIO guest drivers).
 
 ### 3. Desktop Environment Modules (`desktop_environment/`)
 Provides selectable desktop environment options:
@@ -48,23 +49,24 @@ Provides selectable desktop environment options:
 ```
 modules/
 ├── apps/
-│   ├── flatpak.nix       # Flatpak system module
-│   └── steam.nix         # Steam & gaming optimizations module
+│   ├── flatpak.nix          # Flatpak system module
+│   └── steam.nix            # Steam & gaming optimizations module
 ├── desktop_environment/
-│   ├── budgie.nix        # Budgie desktop module
-│   ├── gnome.nix         # GNOME desktop module
-│   ├── hyprland.nix      # Hyprland Wayland compositor module
-│   └── kdeplasma6.nix    # KDE Plasma 6 desktop module
+│   ├── budgie.nix           # Budgie desktop module
+│   ├── gnome.nix            # GNOME desktop module
+│   ├── hyprland.nix         # Hyprland Wayland compositor module
+│   └── kdeplasma6.nix       # KDE Plasma 6 desktop module
 └── system/
-    ├── overlays.nix      # Custom Nixpkgs overlays
+    ├── overlays.nix         # Custom Nixpkgs overlays
     ├── base/
-    │   ├── base.nix      # Baseline NixOS system options
-    │   ├── default.nix   # Main base loader
-    │   └── nix_ld.nix    # Dynamically linked binary support
+    │   ├── base.nix         # Baseline NixOS system options
+    │   ├── default.nix      # Main base loader
+    │   └── nix_ld.nix       # Dynamically linked binary support
     └── services/
-        ├── default.nix   # Aggregator for service modules
-        ├── docker.nix    # Docker daemon & user group configuration
-        ├── ollama.nix    # Ollama local LLM service
-        ├── openssh.nix   # Hardened OpenSSH daemon service
-        └── tailscale.nix # Tailscale VPN service
+        ├── default.nix      # Aggregator for service modules
+        ├── docker.nix       # Docker daemon & user group configuration
+        ├── ollama.nix       # Ollama local LLM service
+        ├── openssh.nix      # Hardened OpenSSH daemon service
+        ├── tailscale.nix    # Tailscale VPN service
+        └── virtualisation.nix # Universal virtualization suite (KVM, QEMU, Virt-Manager)
 ```

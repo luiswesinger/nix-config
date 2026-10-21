@@ -19,6 +19,7 @@
     docker.enable = true;
     tailscale.enable = false;
     ollama.enable = true;
+    virtualisation.enable = true;
   };
 
   # Battery and Energy management 
