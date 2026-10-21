@@ -16,9 +16,18 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Networking
-  networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
+  
+  # ensure firewall allows tailscale traffic
+  networking.firewall.checkReversePath = "loose";
+  networking.firewall.allowedUDPPorts = [ 41641 ];
+  networking.networkmanager = {
+    enable = true;
+    settings.connectivity = {
+      uri = "http://connectivitycheck.gstatic.com/generate_204";
+      interval = 300;
+    };
+  };
 
   # Internationalization
   time.timeZone = "Europe/Berlin";
@@ -47,10 +56,6 @@
 
   # Printing
   services.printing.enable = true;
-
-  # ensure firewall allows tailscale traffic
-  networking.firewall.checkReversePath = "loose";
-  networking.firewall.allowedUDPPorts = [ 41641 ];
 
   # Nix settings
   nix = let

@@ -21,6 +21,10 @@
     ollama.enable = true;
   };
 
+  # Battery and Energy management 
+  services.power-profiles-daemon.enable = true;
+  powerManagement.powertop.enable = true;
+
   networking.hostName = "hp-laptop-luis";
 
   # Define the user luis and link his home-manager configuration

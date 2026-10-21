@@ -8,18 +8,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-colors.url = "github:misterio77/nix-colors";
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nix4nvchad = {
-      url = "github:nix-community/nix4nvchad";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    base16.url = "github:SenchoPens/base16.nix";
-
+    /*
     hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,6 +22,20 @@
     stylix.url = "github:danth/stylix";
 
     noctalia-shell.url = "github:noctalia-dev/noctalia-shell";
+
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    */
+
+    nix4nvchad = {
+      url = "github:nix-community/nix4nvchad";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    base16.url = "github:SenchoPens/base16.nix";
 
     home-manager = {
       url = "github:nix-community/home-manager";
