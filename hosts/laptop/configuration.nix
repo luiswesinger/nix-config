@@ -10,6 +10,7 @@
     
     ../../modules/system/base
     ../../modules/system/services
+    ../../modules/hardware
 
     ../../modules/system/overlays.nix
   ];
@@ -20,6 +21,11 @@
     tailscale.enable = false;
     ollama.enable = true;
     virtualisation.enable = true;
+  };
+
+  # hardware integrations
+  modules.hardware = {
+    logitech.enable = true;
   };
 
   # Battery and Energy management 

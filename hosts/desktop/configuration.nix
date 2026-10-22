@@ -11,6 +11,7 @@
 
     ../../modules/system/base
     ../../modules/system/services
+    ../../modules/hardware
 
     ../../modules/system/overlays.nix
 

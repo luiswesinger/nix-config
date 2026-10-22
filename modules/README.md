@@ -29,17 +29,22 @@ Declarative, toggleable background service modules controlled via the `modules.s
 - [`tailscale.nix`](file:///home/luis/nix-config/modules/system/services/tailscale.nix): `modules.services.tailscale.enable` – Enables the Tailscale mesh VPN daemon.
 - [`virtualisation.nix`](file:///home/luis/nix-config/modules/system/services/virtualisation.nix): `modules.services.virtualisation.enable` – Full virtualization suite (KVM, QEMU, Virt-Manager, OVMF UEFI, TPM, and VirtIO guest drivers).
 
-### 3. Desktop Environment Modules (`desktop_environment/`)
+### 3. Hardware Integrations (`hardware/`)
+Declarative, toggleable hardware support options controlled via the `modules.hardware` namespace:
+- [`default.nix`](file:///home/luis/nix-config/modules/hardware/default.nix): Hardware module loader importing all hardware configurations.
+- [`logitech.nix`](file:///home/luis/nix-config/modules/hardware/logitech.nix): `modules.hardware.logitech.enable` – Enables Logitech Bolt/Unifying wireless receiver support and Solaar GUI with system tray for device configuration and battery status.
+
+### 4. Desktop Environment Modules (`desktop_environment/`)
 Provides selectable desktop environment options:
 - [`kdeplasma6.nix`](file:///home/luis/nix-config/modules/desktop_environment/kdeplasma6.nix): KDE Plasma 6 desktop suite & SDDM display manager (Active on `laptop`, `desktop`, and `minimal`).
 - [`hyprland.nix`](file:///home/luis/nix-config/modules/desktop_environment/hyprland.nix): System-level Hyprland compositor enablement & pam authentication options for Swaylock.
 - [`gnome.nix`](file:///home/luis/nix-config/modules/desktop_environment/gnome.nix) & [`budgie.nix`](file:///home/luis/nix-config/modules/desktop_environment/budgie.nix): Alternative DE options.
 
-### 4. Application System Modules (`apps/`)
+### 5. Application System Modules (`apps/`)
 - [`steam.nix`](file:///home/luis/nix-config/modules/apps/steam.nix): Enables Steam, GameMode, dedicated firewall ports for local play, and 32-bit hardware support.
 - [`flatpak.nix`](file:///home/luis/nix-config/modules/apps/flatpak.nix): System-wide Flatpak package management support.
 
-### 5. Overlays & Custom Packages (`system/overlays.nix`)
+### 6. Overlays & Custom Packages (`system/overlays.nix`)
 - Configures Nixpkgs unfree allowance and custom package overlays.
 
 ---
@@ -56,6 +61,9 @@ modules/
 │   ├── gnome.nix            # GNOME desktop module
 │   ├── hyprland.nix         # Hyprland Wayland compositor module
 │   └── kdeplasma6.nix       # KDE Plasma 6 desktop module
+├── hardware/
+│   ├── default.nix          # Aggregator for hardware modules
+│   └── logitech.nix         # Logitech wireless & Solaar module
 └── system/
     ├── overlays.nix         # Custom Nixpkgs overlays
     ├── base/
