@@ -15,6 +15,7 @@
     p7zip
     imv
     
+    anki
     firefox
 
     # obs-studio
