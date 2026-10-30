@@ -30,7 +30,22 @@
 
   # Battery and Energy management 
   services.power-profiles-daemon.enable = true;
-  powerManagement.powertop.enable = true;
+  # Disabled powertop auto-tune to prevent aggressive USB/Bluetooth power down that breaks suspend/resume
+  powerManagement.powertop.enable = false;
+
+  # Power Management & Suspend fixes for AMD Ryzen (s2idle) + HP laptop
+  boot.kernelParams = [
+    # Prevents NVMe sleep timeouts on AMD s2idle
+    "nvme.noacpi=1"
+    # Helps AMD Renoir APU resume cleanly from modern standby
+    "amdgpu.dcdebugmask=0x10"
+  ];
+
+  # Systemd sleep configuration for reliable suspend recovery
+  systemd.sleep.settings.Sleep = {
+    SuspendState = "freeze";
+    HibernateDelaySec = "0";
+  };
 
   networking.hostName = "hp-laptop-luis";
 
