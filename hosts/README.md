@@ -33,6 +33,7 @@ hosts/
 │   ├── configuration.nix               # Main desktop NixOS configuration
 │   └── hardware-configuration.nix      # Auto-generated hardware options
 ├── laptop/
+│   ├── additional-hardware-config.nix  # AMD APU, power management & suspend fixes
 │   ├── configuration.nix               # Main laptop NixOS configuration
 │   └── hardware-configuration.nix      # Auto-generated hardware options
 └── minimal/
