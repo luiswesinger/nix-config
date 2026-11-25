@@ -5,7 +5,10 @@
     ./direnv.nix
     ./nvchad.nix
     ./btop.nix
+    
     ./cli_tools.nix
+    ./cli_apps.nix
+
     ./yazi.nix
     ./console/default.nix
   ];
