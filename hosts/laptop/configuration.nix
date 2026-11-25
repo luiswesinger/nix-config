@@ -39,12 +39,15 @@
     shell = pkgs.zsh;
   };
 
+  # Enable zramSwap for fast, compressed in-memory swap before hitting disk
+  zramSwap.enable = true;
+
   # Enable a swap file for memory cushioning
   swapDevices = [
     {
-      # The size of the swap file in MiB. 4096 MiB = 4 GiB
+      # The size of the swap file in MiB. 8192 MiB = 8 GiB
       device = "/swapfile";
-      size = 4096;
+      size = 8192;
     }
   ];
 
